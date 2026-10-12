@@ -1,0 +1,3 @@
+# System One is the canonical API surface
+
+Three of the four compared providers (TypeSafe Jev, Cloudflare Clef, Liquid d1) speak TypeSafe's System One contract: `state` plus a map of named `noul`, `choice`, and `score` questions, returning per-option probabilities. OpenAI's Decisions API is a variant of it. We adopt System One, extended with a top-level `images[]` array as Clef and d1 do, as the one shape every Provider adapter translates to and from, and the Own build serves it natively at `POST /v1/systemone` so it can replace Jev byte for byte. A neutral schema with adapters for everyone was rejected because it adds a second translation for three of four providers and gives up drop-in replacement.

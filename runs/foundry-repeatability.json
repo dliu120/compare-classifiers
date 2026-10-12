@@ -1,0 +1,273 @@
+{
+  "observed_at": "2026-10-10T08:06:36+00:00",
+  "scope": "same 40 short-text cases, one repetition per sample",
+  "samples": [
+    {
+      "sample": "initial",
+      "started_at": "2026-10-10T07:54:53+00:00",
+      "finished_at": "2026-10-10T07:56:23+00:00",
+      "short_text_correct": 73,
+      "short_text_questions": 80,
+      "witness": {
+        "run_id": "foundry-decision-1__routing-synthetic",
+        "provider_id": "foundry/decision-1",
+        "case_id": "routing-synthetic-010",
+        "rep": 0,
+        "created_at": "2026-10-10T07:55:13+00:00",
+        "http_status": 200,
+        "latency_s": 0.22941283299587667,
+        "attempts": 1,
+        "error": null,
+        "cost_usd": 1.0206000000000002e-05,
+        "request_raw": {
+          "model": "decision-1",
+          "state": "Hi, I signed up for the Starter plan yesterday and was charged $29 but the pricing page said $19/month for the first three months. Order #LL-20418. Could you check if a promo code didn't apply? I didn't see a field to enter one at checkout.",
+          "questions": {
+            "department": {
+              "type": "choice",
+              "instructions": "Which department should handle this support ticket?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "other": "Anything that fits none of the other departments"
+              }
+            },
+            "is_urgent": {
+              "type": "noul",
+              "instructions": "Does the customer need a response within hours rather than days?"
+            },
+            "frustration": {
+              "type": "score",
+              "instructions": "How frustrated does the customer appear?",
+              "criteria": [
+                "Calm: states the problem neutrally",
+                "Frustrated: annoyed but civil",
+                "Angry: hostile, insulting, or threatening to leave"
+              ]
+            }
+          }
+        },
+        "response_raw": {
+          "model": "microsoft-decision-1",
+          "answers": {
+            "department": {
+              "choice": "billing",
+              "confidence": 0.9301526711114971,
+              "probabilities": {
+                "billing": 0.9441221368891977,
+                "other": 0.013467181307032887,
+                "sales": 0.04148182887931677,
+                "shipping": 0.00040667363754635244,
+                "technical": 0.0005221792869063747
+              },
+              "type": "choice"
+            },
+            "frustration": {
+              "confidence": 0.9190531435116696,
+              "legend": {
+                "0": "Calm: states the problem neutrally",
+                "1": "Frustrated: annoyed but civil",
+                "2": "Angry: hostile, insulting, or threatening to leave"
+              },
+              "probabilities": {
+                "0": 0.9460354290077797,
+                "1": 0.0533716653466441,
+                "2": 0.0005929056455760962
+              },
+              "score": 0.054557476637796296,
+              "type": "score"
+            },
+            "is_urgent": {
+              "noul": 0.5000029945516253,
+              "type": "noul"
+            }
+          },
+          "usage": {
+            "input_tokens": 243,
+            "output_tokens": 3
+          }
+        }
+      }
+    },
+    {
+      "sample": "concurrent",
+      "started_at": "2026-10-10T07:58:46+00:00",
+      "finished_at": "2026-10-10T08:00:45+00:00",
+      "short_text_correct": 73,
+      "short_text_questions": 80,
+      "witness": {
+        "run_id": "foundry-decision-1__routing-synthetic",
+        "provider_id": "foundry/decision-1",
+        "case_id": "routing-synthetic-010",
+        "rep": 0,
+        "created_at": "2026-10-10T07:59:06+00:00",
+        "http_status": 200,
+        "latency_s": 0.28629633400123566,
+        "attempts": 1,
+        "error": null,
+        "cost_usd": 1.0206000000000002e-05,
+        "request_raw": {
+          "model": "decision-1",
+          "state": "Hi, I signed up for the Starter plan yesterday and was charged $29 but the pricing page said $19/month for the first three months. Order #LL-20418. Could you check if a promo code didn't apply? I didn't see a field to enter one at checkout.",
+          "questions": {
+            "department": {
+              "type": "choice",
+              "instructions": "Which department should handle this support ticket?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "other": "Anything that fits none of the other departments"
+              }
+            },
+            "is_urgent": {
+              "type": "noul",
+              "instructions": "Does the customer need a response within hours rather than days?"
+            },
+            "frustration": {
+              "type": "score",
+              "instructions": "How frustrated does the customer appear?",
+              "criteria": [
+                "Calm: states the problem neutrally",
+                "Frustrated: annoyed but civil",
+                "Angry: hostile, insulting, or threatening to leave"
+              ]
+            }
+          }
+        },
+        "response_raw": {
+          "model": "microsoft-decision-1",
+          "answers": {
+            "department": {
+              "choice": "billing",
+              "confidence": 0.9570764161408762,
+              "probabilities": {
+                "billing": 0.9656611329127011,
+                "other": 0.01072752786109474,
+                "sales": 0.022710171245623086,
+                "shipping": 0.00036707581754263344,
+                "technical": 0.000534092163038489
+              },
+              "type": "choice"
+            },
+            "frustration": {
+              "confidence": 0.9089295604782168,
+              "legend": {
+                "0": "Calm: states the problem neutrally",
+                "1": "Frustrated: annoyed but civil",
+                "2": "Angry: hostile, insulting, or threatening to leave"
+              },
+              "probabilities": {
+                "0": 0.9392863736521445,
+                "1": 0.060046569375567765,
+                "2": 0.0006670569722877143
+              },
+              "score": 0.061380683320143195,
+              "type": "score"
+            },
+            "is_urgent": {
+              "noul": 0.5000027503701181,
+              "type": "noul"
+            }
+          },
+          "usage": {
+            "input_tokens": 243,
+            "output_tokens": 3
+          }
+        }
+      }
+    },
+    {
+      "sample": "corrected",
+      "started_at": "2026-10-10T08:02:02+00:00",
+      "finished_at": "2026-10-10T08:03:32+00:00",
+      "short_text_correct": 74,
+      "short_text_questions": 80,
+      "witness": {
+        "run_id": "foundry-decision-1__routing-synthetic",
+        "provider_id": "foundry/decision-1",
+        "case_id": "routing-synthetic-010",
+        "rep": 0,
+        "created_at": "2026-10-10T08:02:22+00:00",
+        "http_status": 200,
+        "latency_s": 0.27217574999667704,
+        "attempts": 1,
+        "error": null,
+        "cost_usd": 1.0206000000000002e-05,
+        "request_raw": {
+          "model": "decision-1",
+          "state": "Hi, I signed up for the Starter plan yesterday and was charged $29 but the pricing page said $19/month for the first three months. Order #LL-20418. Could you check if a promo code didn't apply? I didn't see a field to enter one at checkout.",
+          "questions": {
+            "department": {
+              "type": "choice",
+              "instructions": "Which department should handle this support ticket?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "other": "Anything that fits none of the other departments"
+              }
+            },
+            "is_urgent": {
+              "type": "noul",
+              "instructions": "Does the customer need a response within hours rather than days?"
+            },
+            "frustration": {
+              "type": "score",
+              "instructions": "How frustrated does the customer appear?",
+              "criteria": [
+                "Calm: states the problem neutrally",
+                "Frustrated: annoyed but civil",
+                "Angry: hostile, insulting, or threatening to leave"
+              ]
+            }
+          }
+        },
+        "response_raw": {
+          "model": "microsoft-decision-1",
+          "answers": {
+            "department": {
+              "choice": "billing",
+              "confidence": 0.9360404177533361,
+              "probabilities": {
+                "billing": 0.9488323342026689,
+                "other": 0.013534365044583151,
+                "sales": 0.036790218560421674,
+                "shipping": 0.00031829790921719426,
+                "technical": 0.0005247842831090606
+              },
+              "type": "choice"
+            },
+            "frustration": {
+              "confidence": 0.9191520196175584,
+              "legend": {
+                "0": "Calm: states the problem neutrally",
+                "1": "Frustrated: annoyed but civil",
+                "2": "Angry: hostile, insulting, or threatening to leave"
+              },
+              "probabilities": {
+                "0": 0.9461013464117056,
+                "1": 0.0533753797775493,
+                "2": 0.0005232738107450737
+              },
+              "score": 0.05442192739903945,
+              "type": "score"
+            },
+            "is_urgent": {
+              "noul": 0.468794126291281,
+              "type": "noul"
+            }
+          },
+          "usage": {
+            "input_tokens": 243,
+            "output_tokens": 3
+          }
+        }
+      }
+    }
+  ]
+}

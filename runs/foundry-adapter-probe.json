@@ -1,0 +1,114 @@
+{
+  "provider_id": "foundry/decision-1",
+  "response": {
+    "model": "microsoft-decision-1",
+    "answers": {
+      "department": {
+        "type": "choice",
+        "choice": "technical",
+        "probabilities": {
+          "billing": 0.003170934795495833,
+          "sales": 0.0005510258438375417,
+          "technical": 0.9962780393606666
+        },
+        "confidence": 0.994417059041
+      },
+      "frustration": {
+        "type": "score",
+        "score": 1.000897466504115,
+        "probabilities": {
+          "0": 0.0031598105359064155,
+          "1": 0.992782912424072,
+          "2": 0.004057277040021551
+        },
+        "legend": {
+          "0": "Calm, just stating facts",
+          "1": "Frustrated but civil",
+          "2": "Very angry"
+        },
+        "confidence": 0.9891743686361081
+      },
+      "is_urgent": {
+        "type": "noul",
+        "noul": 0.9989677685539126
+      }
+    },
+    "usage": {
+      "input_tokens": 132,
+      "output_tokens": 3,
+      "reasoning_tokens": null,
+      "cached_tokens": null
+    }
+  },
+  "http_status": 200,
+  "latency_s": 1.6888675420195796,
+  "attempts": 1,
+  "error": null,
+  "request_raw": {
+    "model": "decision-1",
+    "state": "Hi, I've been trying to connect my Stripe account for 3 days and the integration keeps failing. I'm losing sales. Please help ASAP.",
+    "questions": {
+      "department": {
+        "type": "choice",
+        "instructions": "Which team should handle this?",
+        "criteria": {
+          "billing": "Payment or subscription issues",
+          "technical": "Bugs or integration problems",
+          "sales": "Pricing or account questions"
+        }
+      },
+      "frustration": {
+        "type": "score",
+        "instructions": "How frustrated does the customer appear?",
+        "criteria": [
+          "Calm, just stating facts",
+          "Frustrated but civil",
+          "Very angry"
+        ]
+      },
+      "is_urgent": {
+        "type": "noul",
+        "instructions": "Does this message convey urgency?"
+      }
+    }
+  },
+  "response_raw": {
+    "model": "microsoft-decision-1",
+    "answers": {
+      "department": {
+        "choice": "technical",
+        "confidence": 0.994417059041,
+        "probabilities": {
+          "billing": 0.003170934795495833,
+          "sales": 0.0005510258438375417,
+          "technical": 0.9962780393606666
+        },
+        "type": "choice"
+      },
+      "frustration": {
+        "confidence": 0.9891743686361081,
+        "legend": {
+          "0": "Calm, just stating facts",
+          "1": "Frustrated but civil",
+          "2": "Very angry"
+        },
+        "probabilities": {
+          "0": 0.0031598105359064155,
+          "1": 0.992782912424072,
+          "2": 0.004057277040021551
+        },
+        "score": 1.000897466504115,
+        "type": "score"
+      },
+      "is_urgent": {
+        "noul": 0.9989677685539126,
+        "type": "noul"
+      }
+    },
+    "usage": {
+      "input_tokens": 132,
+      "output_tokens": 3
+    }
+  },
+  "cost_usd": 5.544000000000001e-06
+}

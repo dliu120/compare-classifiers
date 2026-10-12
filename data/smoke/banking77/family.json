@@ -1,0 +1,10 @@
+{
+  "name": "banking77",
+  "track": "text",
+  "source": "hf:legacy-datasets/banking77 (default/test)",
+  "license": "cc-by-4.0",
+  "reference_kind": "gold",
+  "generated_by": "bakeoff.datasets.public.load_banking77",
+  "created": "2026-10-06",
+  "notes": "License read from the HF dataset card on 2026-10-06. Option names are the dataset's 77 intent labels verbatim."
+}

@@ -1,0 +1,3 @@
+# OpenAI direct is the reference Route for the Own build
+
+The Own build was conceived as GPT-6 Luna reached through GitHub Copilot via the local aiproxy. GitHub's acceptable-use policy bans excessive automated bulk activity, it publishes no numeric rate limits, aiproxy identifies itself to GitHub as VS Code, aiproxy has no retry or backoff logic, and no logprobs survive that route. OpenAI's Responses API serves the same Luna weights at the same list price with documented rate limits and a batch discount. The full sweep therefore runs on the OpenAI direct Route; the Copilot Route runs the same Variants only at modest scale, as the "what you would ship on a subscription" row, and stops at the first 429.

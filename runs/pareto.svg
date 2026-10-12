@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="580" viewBox="0 0 800 580" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title>Chance-corrected accuracy against cost per 1k Cases</title>
+<text x="72" y="28" fill="#898781" font-size="15" font-weight="600">Chance-corrected accuracy vs cost per 1k Cases (log x)</text>
+<line x1="72.0" y1="336.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="1.0"/>
+<line x1="72.0" y1="56.0" x2="72.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="1.0"/>
+<line x1="72.0" y1="336.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="340.0" fill="#898781" text-anchor="end">-0.50</text>
+<line x1="72.0" y1="289.3" x2="776.0" y2="289.3" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="293.3" fill="#898781" text-anchor="end">-0.25</text>
+<line x1="72.0" y1="242.7" x2="776.0" y2="242.7" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="246.7" fill="#898781" text-anchor="end">0.00</text>
+<line x1="72.0" y1="196.0" x2="776.0" y2="196.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="200.0" fill="#898781" text-anchor="end">0.25</text>
+<line x1="72.0" y1="149.3" x2="776.0" y2="149.3" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="153.3" fill="#898781" text-anchor="end">0.50</text>
+<line x1="72.0" y1="102.7" x2="776.0" y2="102.7" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="106.7" fill="#898781" text-anchor="end">0.75</text>
+<line x1="72.0" y1="56.0" x2="776.0" y2="56.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="60.0" fill="#898781" text-anchor="end">1.00</text>
+<line x1="120.0" y1="56.0" x2="120.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="120.0" y="354" fill="#898781" text-anchor="middle">$0.001</text>
+<line x1="284.0" y1="56.0" x2="284.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="284.0" y="354" fill="#898781" text-anchor="middle">$0.01</text>
+<line x1="448.0" y1="56.0" x2="448.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="448.0" y="354" fill="#898781" text-anchor="middle">$0.1</text>
+<line x1="612.0" y1="56.0" x2="612.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="612.0" y="354" fill="#898781" text-anchor="middle">$1</text>
+<line x1="776.0" y1="56.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="776.0" y="354" fill="#898781" text-anchor="middle">$10</text>
+<text x="88" y="354" fill="#898781" text-anchor="middle">free</text>
+<text x="424" y="374" fill="#898781" text-anchor="middle">cost per 1k Cases (USD, log scale)</text>
+<text transform="translate(18 196) rotate(-90)" fill="#898781" text-anchor="middle">chance-corrected accuracy</text>
+<rect x="83.0" y="313.7" width="10.0" height="10.0" fill="#d88a3a"/>
+<text x="96.0" y="310.7" fill="#898781" font-size="11" text-anchor="start">decision-1 (Microsoft Foundry) · rendered-images</text>
+<rect x="278.7" y="60.5" width="10.0" height="10.0" fill="#d88a3a"/>
+<text x="291.7" y="122.5" fill="#898781" font-size="11" text-anchor="start">decision-1 (Microsoft Foundry) · routing-synthetic</text>
+<polygon points="314.0,64.2 320.0,70.2 314.0,76.2 308.0,70.2" fill="#c98500"/>
+<text x="322.0" y="140.2" fill="#898781" font-size="11" text-anchor="start">d1 (Liquid) · routing-synthetic</text>
+<polygon points="328.3,59.5 334.3,65.5 328.3,71.5 322.3,65.5" fill="#c98500"/>
+<text x="336.3" y="161.5" fill="#898781" font-size="11" text-anchor="start">d1 (Liquid) · banking77</text>
+<circle cx="343.0" cy="70.2" r="5.0" fill="#2a78d6"/>
+<text x="351.0" y="179.2" fill="#898781" font-size="11" text-anchor="start">jev-1.13.0 · routing-synthetic</text>
+<polygon points="343.4,50.0 349.4,56.0 343.4,62.0 337.4,56.0" fill="#c98500"/>
+<text x="351.4" y="204.0" fill="#898781" font-size="11" text-anchor="start">d1 (Liquid) · rendered-images</text>
+<rect x="342.2" y="88.8" width="10.0" height="10.0" fill="#d88a3a"/>
+<text x="355.2" y="228.8" fill="#898781" font-size="11" text-anchor="start">decision-1 (Microsoft Foundry) · banking77</text>
+<polygon points="381.5,50.0 375.5,61.0 387.5,61.0" fill="#199e70"/>
+<text x="389.5" y="243.0" fill="#898781" font-size="11" text-anchor="start">clef-flash (Cloudflare) · rendered-images</text>
+<path d="M380.7 56.0 H392.7 M386.7 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="394.7" y="256.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (OpenAI Decisions) · rendered-images</text>
+<circle cx="387.7" cy="93.8" r="5.0" fill="#2a78d6"/>
+<text x="395.7" y="85.8" fill="#898781" font-size="11" text-anchor="start">jev-1.13.0 · banking77</text>
+<polygon points="389.0,64.2 383.0,75.2 395.0,75.2" fill="#199e70"/>
+<text x="397.0" y="270.2" fill="#898781" font-size="11" text-anchor="start">clef-flash (Cloudflare) · routing-synthetic</text>
+<path d="M396.0 65.5 H408.0 M402.0 59.5 V71.5" stroke="#d55181" stroke-width="3"/>
+<text x="410.0" y="291.5" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (OpenAI Decisions) · routing-synthetic</text>
+<path d="M411.8 103.3 H423.8 M417.8 97.3 V109.3" stroke="#d55181" stroke-width="3"/>
+<text x="425.8" y="108.3" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (OpenAI Decisions) · banking77</text>
+<path d="M435.5 51.0 L445.5 61.0 M435.5 61.0 L445.5 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="432.5" y="334.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · no cap · rendered-…</text>
+<path d="M435.6 51.0 L445.6 61.0 M435.6 61.0 L445.6 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="432.6" y="347.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · no cap · rendered-i…</text>
+<path d="M444.3 55.7 L454.3 65.7 M444.3 65.7 L454.3 55.7" stroke="#9085e9" stroke-width="3"/>
+<text x="441.3" y="364.7" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · no cap · routing-s…</text>
+<path d="M444.5 60.5 L454.5 70.5 M444.5 70.5 L454.5 60.5" stroke="#9085e9" stroke-width="3"/>
+<text x="441.5" y="382.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · no cap · routing-sy…</text>
+<polygon points="451.4,50.0 445.4,61.0 457.4,61.0" fill="#199e70"/>
+<text x="459.4" y="308.0" fill="#898781" font-size="11" text-anchor="start">clef (Cloudflare) · rendered-images</text>
+<polygon points="458.9,54.7 452.9,65.7 464.9,65.7" fill="#199e70"/>
+<text x="466.9" y="325.7" fill="#898781" font-size="11" text-anchor="start">clef (Cloudflare) · routing-synthetic</text>
+<polygon points="460.9,59.5 454.9,70.5 466.9,70.5" fill="#199e70"/>
+<text x="468.9" y="343.5" fill="#898781" font-size="11" text-anchor="start">clef-flash (Cloudflare) · banking77</text>
+<polygon points="530.7,59.5 524.7,70.5 536.7,70.5" fill="#199e70"/>
+<text x="538.7" y="70.5" fill="#898781" font-size="11" text-anchor="start">clef (Cloudflare) · banking77</text>
+<path d="M532.8 51.0 L542.8 61.0 M532.8 61.0 L542.8 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="529.8" y="399.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · no cap · longstate…</text>
+<path d="M532.9 51.0 L542.9 61.0 M532.9 61.0 L542.9 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="529.9" y="412.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · no cap · longstate-…</text>
+<path d="M545.5 79.4 L555.5 89.4 M545.5 89.4 L555.5 79.4" stroke="#9085e9" stroke-width="3"/>
+<text x="542.5" y="427.4" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · no cap · banking77</text>
+<path d="M545.8 88.8 L555.8 98.8 M545.8 98.8 L555.8 88.8" stroke="#9085e9" stroke-width="3"/>
+<text x="542.8" y="449.8" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · no cap · banking77</text>
+<path d="M689.7 56.0 H701.7 M695.7 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="687.7" y="464.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (OpenAI Decisions) · longstate-32k</text>
+<polygon points="695.8,50.0 689.8,61.0 701.8,61.0" fill="#199e70"/>
+<text x="687.8" y="477.0" fill="#898781" font-size="11" text-anchor="end">clef-flash (Cloudflare) · longstate-32k</text>
+<polygon points="697.3,50.0 703.3,56.0 697.3,62.0 691.3,56.0" fill="#c98500"/>
+<text x="689.3" y="165.0" fill="#898781" font-size="11" text-anchor="end">d1 (Liquid) · longstate-32k</text>
+<polygon points="765.7,50.0 759.7,61.0 771.7,61.0" fill="#199e70"/>
+<text x="757.7" y="139.0" fill="#898781" font-size="11" text-anchor="end">clef (Cloudflare) · longstate-32k</text>
+<polygon points="78.0,374.0 72.0,385.0 84.0,385.0" fill="#199e70"/>
+<text x="92" y="384" fill="#898781">cloudflare</text>
+<rect x="73.0" y="393.0" width="10.0" height="10.0" fill="#d88a3a"/>
+<text x="92" y="402" fill="#898781">foundry</text>
+<circle cx="78.0" cy="416.0" r="5.0" fill="#2a78d6"/>
+<text x="92" y="420" fill="#898781">jev</text>
+<polygon points="78.0,428.0 84.0,434.0 78.0,440.0 72.0,434.0" fill="#c98500"/>
+<text x="92" y="438" fill="#898781">liquid</text>
+<path d="M72.0 452.0 H84.0 M78.0 446.0 V458.0" stroke="#d55181" stroke-width="3"/>
+<text x="92" y="456" fill="#898781">openai-decisions</text>
+<path d="M73.0 465.0 L83.0 475.0 M73.0 475.0 L83.0 465.0" stroke="#9085e9" stroke-width="3"/>
+<text x="92" y="474" fill="#898781">ownbuild</text>
+<text x="72" y="498" fill="#898781" font-weight="600">Unknown cost, not plotted:</text>
+<text x="84" y="516" fill="#898781">decision-1 (Microsoft Foundry) · longstate-32k (chance-corrected -0.538)</text>
+<text x="84" y="534" fill="#898781">jev-1.13.0 · longstate-32k (chance-corrected -0.538)</text>
+<text x="84" y="552" fill="#898781">jev-1.13.0 · rendered-images (chance-corrected -0.407)</text>
+</svg>

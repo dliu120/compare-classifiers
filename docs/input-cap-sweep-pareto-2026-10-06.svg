@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="688" viewBox="0 0 800 688" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title>Chance-corrected accuracy against cost per 1k Cases</title>
+<text x="72" y="28" fill="#898781" font-size="15" font-weight="600">Chance-corrected accuracy vs cost per 1k Cases (log x)</text>
+<line x1="72.0" y1="336.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="1.0"/>
+<line x1="72.0" y1="56.0" x2="72.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="1.0"/>
+<line x1="72.0" y1="336.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="340.0" fill="#898781" text-anchor="end">0.00</text>
+<line x1="72.0" y1="266.0" x2="776.0" y2="266.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="270.0" fill="#898781" text-anchor="end">0.25</text>
+<line x1="72.0" y1="196.0" x2="776.0" y2="196.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="200.0" fill="#898781" text-anchor="end">0.50</text>
+<line x1="72.0" y1="126.0" x2="776.0" y2="126.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="130.0" fill="#898781" text-anchor="end">0.75</text>
+<line x1="72.0" y1="56.0" x2="776.0" y2="56.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="60.0" fill="#898781" text-anchor="end">1.00</text>
+<line x1="120.0" y1="56.0" x2="120.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="120.0" y="354" fill="#898781" text-anchor="middle">$0.1</text>
+<line x1="338.7" y1="56.0" x2="338.7" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="338.7" y="354" fill="#898781" text-anchor="middle">$1</text>
+<line x1="557.3" y1="56.0" x2="557.3" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="557.3" y="354" fill="#898781" text-anchor="middle">$10</text>
+<line x1="776.0" y1="56.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="776.0" y="354" fill="#898781" text-anchor="middle">$100</text>
+<text x="424" y="374" fill="#898781" text-anchor="middle">cost per 1k Cases (USD, log scale)</text>
+<text transform="translate(18 196) rotate(-90)" fill="#898781" text-anchor="middle">chance-corrected accuracy</text>
+<path d="M126.7 51.0 L136.7 61.0 M126.7 61.0 L136.7 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="139.7" y="74.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤128000 · longs…</text>
+<path d="M127.0 51.0 L137.0 61.0 M127.0 61.0 L137.0 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="140.0" y="113.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤128000 · longst…</text>
+<path d="M127.3 51.0 L137.3 61.0 M127.3 61.0 L137.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="140.3" y="152.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤256000 · longst…</text>
+<path d="M176.7 51.0 L186.7 61.0 M176.7 61.0 L186.7 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="189.7" y="178.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤128000 · longst…</text>
+<path d="M177.1 51.0 L187.1 61.0 M177.1 61.0 L187.1 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="190.1" y="217.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤32000 · longst…</text>
+<path d="M177.7 51.0 L187.7 61.0 M177.7 61.0 L187.7 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="190.7" y="256.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤256000 · longst…</text>
+<path d="M210.3 51.0 L220.3 61.0 M210.3 61.0 L220.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="223.3" y="295.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤32000 · longst…</text>
+<path d="M210.4 51.0 L220.4 61.0 M210.4 61.0 L220.4 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="223.4" y="308.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤64000 · longst…</text>
+<path d="M210.6 51.0 L220.6 61.0 M210.6 61.0 L220.6 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="223.6" y="321.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤256000 · longs…</text>
+<path d="M210.7 51.0 L220.7 61.0 M210.7 61.0 L220.7 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="223.7" y="334.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤256000 · longst…</text>
+<path d="M237.8 51.0 L247.8 61.0 M237.8 61.0 L247.8 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="250.8" y="347.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤32000 · longst…</text>
+<path d="M238.3 51.0 L248.3 61.0 M238.3 61.0 L248.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="251.3" y="360.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤64000 · longst…</text>
+<path d="M255.9 51.0 L265.9 61.0 M255.9 61.0 L265.9 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="268.9" y="373.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤64000 · longst…</text>
+<path d="M266.3 51.0 L276.3 61.0 M266.3 61.0 L276.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="279.3" y="386.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤256000 · longs…</text>
+<path d="M266.5 51.0 L276.5 61.0 M266.5 61.0 L276.5 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="279.5" y="399.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤32000 · longsta…</text>
+<circle cx="273.4" cy="56.0" r="5.0" fill="#2a78d6"/>
+<text x="281.4" y="165.0" fill="#898781" font-size="11" text-anchor="start">jev-1.13.0 · longstate-8k</text>
+<path d="M288.3 51.0 L298.3 61.0 M288.3 61.0 L298.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="301.3" y="412.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤64000 · longsta…</text>
+<path d="M291.3 51.0 L301.3 61.0 M291.3 61.0 L301.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="304.3" y="425.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤128000 · longst…</text>
+<path d="M298.2 51.0 L308.2 61.0 M298.2 61.0 L308.2 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="311.2" y="438.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤64000 · longsta…</text>
+<path d="M298.2 51.0 L308.2 61.0 M298.2 61.0 L308.2 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="311.2" y="451.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤256000 · longs…</text>
+<polygon points="321.0,50.0 327.0,56.0 321.0,62.0 315.0,56.0" fill="#c98500"/>
+<text x="329.0" y="464.0" fill="#898781" font-size="11" text-anchor="start">d1 (Liquid) · longstate-8k</text>
+<path d="M315.4 56.0 H327.4 M321.4 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="329.4" y="477.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (OpenAI Decisions) · longstate-8k</text>
+<path d="M317.0 51.0 L327.0 61.0 M317.0 61.0 L327.0 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="330.0" y="490.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤128000 · longs…</text>
+<path d="M317.3 51.0 L327.3 61.0 M317.3 61.0 L327.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="330.3" y="503.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤128000 · longst…</text>
+<path d="M317.3 51.0 L327.3 61.0 M317.3 61.0 L327.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="330.3" y="516.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤64000 · longst…</text>
+<path d="M317.3 51.0 L327.3 61.0 M317.3 61.0 L327.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="330.3" y="529.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤256000 · longst…</text>
+<path d="M327.3 51.0 L337.3 61.0 M327.3 61.0 L337.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="340.3" y="542.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤128000 · longs…</text>
+<circle cx="337.9" cy="56.0" r="5.0" fill="#2a78d6"/>
+<text x="345.9" y="555.0" fill="#898781" font-size="11" text-anchor="start">jev-1.13.0 · longstate-16k</text>
+<path d="M334.5 51.0 L344.5 61.0 M334.5 61.0 L344.5 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="347.5" y="568.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤64000 · longsta…</text>
+<path d="M349.5 51.0 L359.5 61.0 M349.5 61.0 L359.5 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="362.5" y="581.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤32000 · longsta…</text>
+<path d="M379.6 56.0 H391.6 M385.6 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="393.6" y="594.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (OpenAI Decisions) · longstate-16k</text>
+<path d="M380.6 51.0 L390.6 61.0 M380.6 61.0 L390.6 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="393.6" y="607.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤256000 · longs…</text>
+<polygon points="386.9,121.8 392.9,127.8 386.9,133.8 380.9,127.8" fill="#c98500"/>
+<text x="394.9" y="626.8" fill="#898781" font-size="11" text-anchor="start">d1 (Liquid) · longstate-16k</text>
+<path d="M404.5 51.0 L414.5 61.0 M404.5 61.0 L414.5 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="417.5" y="646.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤32000 · longsta…</text>
+<path d="M412.9 51.0 L422.9 61.0 M412.9 61.0 L422.9 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="425.9" y="659.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · in ≤256000 · longs…</text>
+<path d="M412.9 51.0 L422.9 61.0 M412.9 61.0 L422.9 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="425.9" y="672.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (openai) · effort none · in ≤64000 · longsta…</text>
+<path d="M417.3 56.0 H429.3 M423.3 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="431.3" y="685.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (OpenAI Decisions) · longstate-24k</text>
+<path d="M419.8 51.0 L429.8 61.0 M419.8 61.0 L429.8 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="416.8" y="87.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤128000 · longs…</text>
+<polygon points="425.1,85.9 431.1,91.9 425.1,97.9 419.1,91.9" fill="#c98500"/>
+<text x="433.1" y="96.9" fill="#898781" font-size="11" text-anchor="start">d1 (Liquid) · longstate-24k</text>
+<path d="M431.0 230.5 L441.0 240.5 M431.0 240.5 L441.0 230.5" stroke="#9085e9" stroke-width="3"/>
+<text x="428.0" y="240.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤32000 · longsta…</text>
+<path d="M431.0 194.6 L441.0 204.6 M431.0 204.6 L441.0 194.6" stroke="#9085e9" stroke-width="3"/>
+<text x="428.0" y="191.6" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤32000 · longst…</text>
+<path d="M444.3 56.0 H456.3 M450.3 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="458.3" y="698.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (OpenAI Decisions) · longstate-32k</text>
+<polygon points="450.5,50.0 444.5,61.0 456.5,61.0" fill="#199e70"/>
+<text x="458.5" y="191.0" fill="#898781" font-size="11" text-anchor="start">clef-flash (Cloudflare) · longstate-32k</text>
+<path d="M446.3 194.6 L456.3 204.6 M446.3 204.6 L456.3 194.6" stroke="#9085e9" stroke-width="3"/>
+<text x="443.3" y="269.6" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤32000 · longst…</text>
+<path d="M446.3 51.0 L456.3 61.0 M446.3 61.0 L456.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="443.3" y="698.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤32000 · longst…</text>
+<path d="M446.3 230.5 L456.3 240.5 M446.3 240.5 L456.3 230.5" stroke="#9085e9" stroke-width="3"/>
+<text x="443.3" y="721.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤32000 · longsta…</text>
+<path d="M446.3 230.5 L456.3 240.5 M446.3 240.5 L456.3 230.5" stroke="#9085e9" stroke-width="3"/>
+<text x="443.3" y="734.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤32000 · longst…</text>
+<path d="M446.3 51.0 L456.3 61.0 M446.3 61.0 L456.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="443.3" y="750.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤32000 · longsta…</text>
+<path d="M446.3 266.4 L456.3 276.4 M446.3 276.4 L456.3 266.4" stroke="#9085e9" stroke-width="3"/>
+<text x="443.3" y="770.4" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤32000 · longsta…</text>
+<polygon points="452.4,50.0 458.4,56.0 452.4,62.0 446.4,56.0" fill="#c98500"/>
+<text x="460.4" y="204.0" fill="#898781" font-size="11" text-anchor="start">d1 (Liquid) · longstate-32k</text>
+<path d="M477.4 51.0 L487.4 61.0 M477.4 61.0 L487.4 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="474.4" y="789.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤256000 · longst…</text>
+<path d="M477.4 51.0 L487.4 61.0 M477.4 61.0 L487.4 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="474.4" y="802.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤128000 · longst…</text>
+<path d="M495.7 230.5 L505.7 240.5 M495.7 240.5 L505.7 230.5" stroke="#9085e9" stroke-width="3"/>
+<text x="492.7" y="825.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤64000 · longsta…</text>
+<path d="M495.7 230.5 L505.7 240.5 M495.7 240.5 L505.7 230.5" stroke="#9085e9" stroke-width="3"/>
+<text x="492.7" y="838.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤64000 · longst…</text>
+<path d="M495.7 51.0 L505.7 61.0 M495.7 61.0 L505.7 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="492.7" y="854.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤128000 · longs…</text>
+<path d="M509.5 56.0 H521.5 M515.5 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="507.5" y="867.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (OpenAI Decisions) · longstate-64k</text>
+<polygon points="515.8,50.0 509.8,61.0 521.8,61.0" fill="#199e70"/>
+<text x="523.8" y="74.0" fill="#898781" font-size="11" text-anchor="start">clef-flash (Cloudflare) · longstate-64k</text>
+<path d="M511.0 158.7 L521.0 168.7 M511.0 168.7 L521.0 158.7" stroke="#9085e9" stroke-width="3"/>
+<text x="508.0" y="883.7" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤64000 · longsta…</text>
+<path d="M511.1 122.8 L521.1 132.8 M511.1 132.8 L521.1 122.8" stroke="#9085e9" stroke-width="3"/>
+<text x="508.1" y="899.8" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤64000 · longst…</text>
+<path d="M511.1 51.0 L521.1 61.0 M511.1 61.0 L521.1 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="508.1" y="919.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤64000 · longsta…</text>
+<path d="M511.1 51.0 L521.1 61.0 M511.1 61.0 L521.1 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="508.1" y="932.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤64000 · longst…</text>
+<polygon points="543.6,50.0 537.6,61.0 549.6,61.0" fill="#199e70"/>
+<text x="551.6" y="113.0" fill="#898781" font-size="11" text-anchor="start">clef (Cloudflare) · longstate-32k</text>
+<path d="M575.1 56.0 H587.1 M581.1 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="573.1" y="945.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (OpenAI Decisions) · longstate-128k</text>
+<path d="M576.3 51.0 L586.3 61.0 M576.3 61.0 L586.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="573.3" y="958.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤128000 · longst…</text>
+<path d="M576.3 230.5 L586.3 240.5 M576.3 240.5 L586.3 230.5" stroke="#9085e9" stroke-width="3"/>
+<text x="573.3" y="981.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤128000 · longs…</text>
+<path d="M576.3 51.0 L586.3 61.0 M576.3 61.0 L586.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="573.3" y="997.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤128000 · longs…</text>
+<path d="M576.3 230.5 L586.3 240.5 M576.3 240.5 L586.3 230.5" stroke="#9085e9" stroke-width="3"/>
+<text x="573.3" y="1020.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤128000 · longst…</text>
+<path d="M576.3 51.0 L586.3 61.0 M576.3 61.0 L586.3 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="573.3" y="1036.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤256000 · longst…</text>
+<path d="M576.4 51.0 L586.4 61.0 M576.4 61.0 L586.4 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="573.4" y="1049.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤256000 · longs…</text>
+<polygon points="581.5,50.0 575.5,61.0 587.5,61.0" fill="#199e70"/>
+<text x="573.5" y="1062.0" fill="#898781" font-size="11" text-anchor="end">clef-flash (Cloudflare) · longstate-128k</text>
+<polygon points="609.0,50.0 603.0,61.0 615.0,61.0" fill="#199e70"/>
+<text x="601.0" y="1075.0" fill="#898781" font-size="11" text-anchor="end">clef (Cloudflare) · longstate-64k</text>
+<path d="M640.7 56.0 H652.7 M646.7 50.0 V62.0" stroke="#d55181" stroke-width="3"/>
+<text x="638.7" y="1088.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (OpenAI Decisions) · longstate-256k</text>
+<path d="M641.9 51.0 L651.9 61.0 M641.9 61.0 L651.9 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="638.9" y="1101.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · in ≤256000 · longs…</text>
+<path d="M641.9 51.0 L651.9 61.0 M641.9 61.0 L651.9 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="638.9" y="1114.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (openai) · effort none · in ≤256000 · longst…</text>
+<polygon points="674.6,50.0 668.6,61.0 680.6,61.0" fill="#199e70"/>
+<text x="666.6" y="711.0" fill="#898781" font-size="11" text-anchor="end">clef (Cloudflare) · longstate-128k</text>
+<polygon points="78.0,374.0 72.0,385.0 84.0,385.0" fill="#199e70"/>
+<text x="92" y="384" fill="#898781">cloudflare</text>
+<circle cx="78.0" cy="398.0" r="5.0" fill="#2a78d6"/>
+<text x="92" y="402" fill="#898781">jev</text>
+<polygon points="78.0,410.0 84.0,416.0 78.0,422.0 72.0,416.0" fill="#c98500"/>
+<text x="92" y="420" fill="#898781">liquid</text>
+<path d="M72.0 434.0 H84.0 M78.0 428.0 V440.0" stroke="#d55181" stroke-width="3"/>
+<text x="92" y="438" fill="#898781">openai-decisions</text>
+<path d="M73.0 447.0 L83.0 457.0 M73.0 457.0 L83.0 447.0" stroke="#9085e9" stroke-width="3"/>
+<text x="92" y="456" fill="#898781">ownbuild</text>
+<text x="72" y="480" fill="#898781" font-weight="600">Unknown cost, not plotted:</text>
+<text x="84" y="498" fill="#898781">jev-1.13.0 · longstate-128k (chance-corrected -0.538)</text>
+<text x="84" y="516" fill="#898781">d1 (Liquid) · longstate-128k (chance-corrected -0.538)</text>
+<text x="84" y="534" fill="#898781">jev-1.13.0 · longstate-24k (chance-corrected -0.538)</text>
+<text x="84" y="552" fill="#898781">clef (Cloudflare) · longstate-256k (chance-corrected -0.538)</text>
+<text x="84" y="570" fill="#898781">clef-flash (Cloudflare) · longstate-256k (chance-corrected -0.538)</text>
+<text x="84" y="588" fill="#898781">jev-1.13.0 · longstate-256k (chance-corrected -0.538)</text>
+<text x="84" y="606" fill="#898781">d1 (Liquid) · longstate-256k (chance-corrected -0.538)</text>
+<text x="84" y="624" fill="#898781">jev-1.13.0 · longstate-32k (chance-corrected -0.538)</text>
+<text x="84" y="642" fill="#898781">jev-1.13.0 · longstate-64k (chance-corrected -0.538)</text>
+<text x="84" y="660" fill="#898781">d1 (Liquid) · longstate-64k (chance-corrected -0.538)</text>
+</svg>

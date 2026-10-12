@@ -1,0 +1,48 @@
+[project]
+name = "bakeoff"
+version = "0.1.0"
+description = "Decision API bakeoff: hosted decision APIs versus an own-build decision endpoint, on text and images"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "httpx>=0.28",
+  "pydantic>=2.12",
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+  "python-dotenv>=1.0",
+  "pillow>=11",
+  "numpy>=2",
+  "datasets>=3",
+  "tiktoken>=0.8",
+  "typer>=0.12",
+  "rich>=13",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.9"]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.24", "respx>=0.22", "ruff>=0.6"]
+
+[project.scripts]
+bakeoff = "bakeoff.cli:app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bakeoff"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+markers = ["live: calls a real provider (deselected by default)"]
+addopts = "-m 'not live'"
+
+[tool.ruff]
+line-length = 100
+target-version = "py313"
+
+[tool.ruff.lint]
+extend-select = ["E501"]

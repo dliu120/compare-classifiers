@@ -1,0 +1,786 @@
+{
+  "seed": 0,
+  "tokenizer": "o200k_base",
+  "positions": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "questions_per_case": 2,
+  "families": [
+    {
+      "name": "longstate-512k",
+      "target_tokens": 512000,
+      "cases": [
+        {
+          "id": "longstate-512k-p10-0",
+          "state_tokens": 512067,
+          "state_sha256": "b2396a221921c4aa23835c662eca8891119aaa679aba0b365867214e73bf7ae2",
+          "position": 0.1,
+          "needle_id": "TK-SKVGEX",
+          "needle_index": 737,
+          "ticket_count": 7368,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-SKVGEX?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-512k-p10-1",
+          "state_tokens": 512004,
+          "state_sha256": "491a0b37bb3f050aff953f2573c93007e22278536bb1a4f46c9da630c382e5d8",
+          "position": 0.1,
+          "needle_id": "TK-PZVX5V",
+          "needle_index": 738,
+          "ticket_count": 7380,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "billing",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-PZVX5V?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-512k-p50-0",
+          "state_tokens": 512005,
+          "state_sha256": "a960bb518fe63cf30f58170dbf23622a7f9b0bc0c66bf8b39f04c6e2165e4961",
+          "position": 0.5,
+          "needle_id": "TK-DJCY4S",
+          "needle_index": 3693,
+          "ticket_count": 7387,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-DJCY4S?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-512k-p50-1",
+          "state_tokens": 512061,
+          "state_sha256": "51cd18450c9d3d9787b2e73c6e5f0525c36755fc203d7e8d8523349c62639998",
+          "position": 0.5,
+          "needle_id": "TK-3MLXAK",
+          "needle_index": 3682,
+          "ticket_count": 7364,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "technical",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-3MLXAK?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-512k-p90-0",
+          "state_tokens": 512042,
+          "state_sha256": "eaa1c006d028790de166a106ea39648cdc5b53d21dfd4c23c521ee8896a617e2",
+          "position": 0.9,
+          "needle_id": "TK-VCZUX4",
+          "needle_index": 6638,
+          "ticket_count": 7377,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-VCZUX4?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-512k-p90-1",
+          "state_tokens": 512013,
+          "state_sha256": "a95717d639c89ee19aa2f7b99d0a2c3a5cea3f09166260e3cd71d011e49845bf",
+          "position": 0.9,
+          "needle_id": "TK-MVD9AB",
+          "needle_index": 6636,
+          "ticket_count": 7374,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "sales",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-MVD9AB?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "longstate-768k",
+      "target_tokens": 768000,
+      "cases": [
+        {
+          "id": "longstate-768k-p10-0",
+          "state_tokens": 768041,
+          "state_sha256": "c701eb3a333fd5dadfa3ede7fe1e460e90dc4fb40303966c36fd296d37ff1812",
+          "position": 0.1,
+          "needle_id": "TK-SKVGEX",
+          "needle_index": 1106,
+          "ticket_count": 11058,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-SKVGEX?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-768k-p10-1",
+          "state_tokens": 768008,
+          "state_sha256": "d050ac5990f70b3e23a52ad3117a468f227d36e9c8f751c4eded9a390e42a115",
+          "position": 0.1,
+          "needle_id": "TK-N7Q9MN",
+          "needle_index": 1108,
+          "ticket_count": 11076,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "billing",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-N7Q9MN?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-768k-p50-0",
+          "state_tokens": 768006,
+          "state_sha256": "0f37a476d6c6bd9bec3089348fa8366b1b9e06748bc9368628ba2c5f48d69371",
+          "position": 0.5,
+          "needle_id": "TK-Y4DU67",
+          "needle_index": 5526,
+          "ticket_count": 11054,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-Y4DU67?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-768k-p50-1",
+          "state_tokens": 768062,
+          "state_sha256": "3eb3d2d3c8fbada8da36d97dc55fe3405ebfe9c7639437fc3961b991b48c9cd9",
+          "position": 0.5,
+          "needle_id": "TK-2Y9K4E",
+          "needle_index": 5530,
+          "ticket_count": 11061,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "technical",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-2Y9K4E?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-768k-p90-0",
+          "state_tokens": 768041,
+          "state_sha256": "1ec900ebf153bd66b7c6d4dea78b98ffd6eb5f2495961a019080de5f9552f9a7",
+          "position": 0.9,
+          "needle_id": "TK-UMWJN9",
+          "needle_index": 9951,
+          "ticket_count": 11058,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-UMWJN9?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-768k-p90-1",
+          "state_tokens": 768053,
+          "state_sha256": "385691e5a39116459d3ca036671f09e78d05bf106ece115c30e2b441280e4add",
+          "position": 0.9,
+          "needle_id": "TK-HE5BL8",
+          "needle_index": 9973,
+          "ticket_count": 11082,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "sales",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-HE5BL8?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "longstate-900k",
+      "target_tokens": 900000,
+      "cases": [
+        {
+          "id": "longstate-900k-p10-0",
+          "state_tokens": 900018,
+          "state_sha256": "f459fb538f94142b181fbad7c20d978990c7338c08e3a90ebb48d1f1c687caa4",
+          "position": 0.1,
+          "needle_id": "TK-SKVGEX",
+          "needle_index": 1296,
+          "ticket_count": 12962,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-SKVGEX?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-900k-p10-1",
+          "state_tokens": 900041,
+          "state_sha256": "881c5504409d218716053d520c92eb8247784bff013325f9cbcdabadf28e600f",
+          "position": 0.1,
+          "needle_id": "TK-4GG2Y3",
+          "needle_index": 1297,
+          "ticket_count": 12974,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "billing",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-4GG2Y3?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-900k-p50-0",
+          "state_tokens": 900037,
+          "state_sha256": "3a8abff95c38f689fcc1e515fe4c26b7550278d2fb9b4d53f8b0eeb37f8fc2a5",
+          "position": 0.5,
+          "needle_id": "TK-PXQZ2A",
+          "needle_index": 6477,
+          "ticket_count": 12955,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-PXQZ2A?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-900k-p50-1",
+          "state_tokens": 900031,
+          "state_sha256": "8dffc326f83c961391bb349c36a0232757121ca626ad16e4a4b289362897744c",
+          "position": 0.5,
+          "needle_id": "TK-B3BAJL",
+          "needle_index": 6484,
+          "ticket_count": 12968,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "technical",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-B3BAJL?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-900k-p90-0",
+          "state_tokens": 900004,
+          "state_sha256": "146d89c95c889488049a81cc93f8d6f05d6cabcccab1f401ff45cf0630b8c642",
+          "position": 0.9,
+          "needle_id": "TK-AEPB9K",
+          "needle_index": 11671,
+          "ticket_count": 12969,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "security",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": true,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-AEPB9K?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        },
+        {
+          "id": "longstate-900k-p90-1",
+          "state_tokens": 900011,
+          "state_sha256": "ec9707d6043af4ea08b8344acae16500eff05ccf5703c6b9b82234adc3a06647",
+          "position": 0.9,
+          "needle_id": "TK-NBGD23",
+          "needle_index": 11667,
+          "ticket_count": 12964,
+          "reference": {
+            "team": {
+              "kind": "gold",
+              "noul": null,
+              "choice": "sales",
+              "score": null,
+              "source": "by construction"
+            },
+            "mentions_breach": {
+              "kind": "gold",
+              "noul": false,
+              "choice": null,
+              "score": null,
+              "source": "by construction"
+            }
+          },
+          "questions": {
+            "team": {
+              "type": "choice",
+              "instructions": "Which team should handle ticket TK-NBGD23?",
+              "criteria": {
+                "billing": "Charges, invoices, refunds, payment methods, subscription renewals",
+                "technical": "Bugs, errors, outages, login failures, device and integration problems",
+                "sales": "Pricing, plans, upgrades, quotes, trials, pre-purchase questions",
+                "shipping": "Delivery status, lost or damaged packages, address changes, return logistics",
+                "security": "Account compromise, suspicious logins, data breach notifications"
+              }
+            },
+            "mentions_breach": {
+              "type": "noul",
+              "instructions": "Does any ticket in this list mention a data breach?"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

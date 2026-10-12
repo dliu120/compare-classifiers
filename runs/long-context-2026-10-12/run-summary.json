@@ -1,0 +1,58 @@
+{
+  "run_ids": [
+    "openai-decisions-gpt-6-luna__longstate-512k",
+    "openai-decisions-gpt-6-luna__longstate-768k",
+    "openai-decisions-gpt-6-luna__longstate-900k",
+    "ownbuild-openai-gpt-6-luna-effort-none-mode-probabilities-samples-1__longstate-512k",
+    "ownbuild-openai-gpt-6-luna-effort-none-mode-probabilities-samples-1__longstate-768k",
+    "ownbuild-openai-gpt-6-luna-effort-none-mode-probabilities-samples-1__longstate-900k",
+    "ownbuild-copilot-gpt-6-luna-effort-none-mode-probabilities-samples-1__longstate-512k",
+    "ownbuild-copilot-gpt-6-luna-effort-none-mode-probabilities-samples-1__longstate-768k",
+    "ownbuild-copilot-gpt-6-luna-effort-none-mode-probabilities-samples-1__longstate-900k"
+  ],
+  "cases_done": 54,
+  "non_answers": 84,
+  "cost_usd": 1.5376519000000002,
+  "unknown_costs": 42,
+  "stopped_for_budget": false,
+  "rate_limited": [],
+  "cloudflare_initial": {
+    "run_ids": [
+      "cloudflare-clef__longstate-512k",
+      "cloudflare-clef__longstate-768k",
+      "cloudflare-clef__longstate-900k",
+      "cloudflare-clef-flash__longstate-512k",
+      "cloudflare-clef-flash__longstate-768k",
+      "cloudflare-clef-flash__longstate-900k"
+    ],
+    "cases_done": 30,
+    "non_answers": 60,
+    "cost_usd": 0.0,
+    "unknown_costs": 30,
+    "stopped_for_budget": true,
+    "rate_limited": []
+  },
+  "cloudflare_resume": {
+    "run_ids": [
+      "cloudflare-clef__longstate-512k",
+      "cloudflare-clef__longstate-768k",
+      "cloudflare-clef__longstate-900k",
+      "cloudflare-clef-flash__longstate-512k",
+      "cloudflare-clef-flash__longstate-768k",
+      "cloudflare-clef-flash__longstate-900k"
+    ],
+    "cases_done": 6,
+    "non_answers": 12,
+    "cost_usd": 0.0,
+    "unknown_costs": 6,
+    "stopped_for_budget": false,
+    "rate_limited": []
+  },
+  "measurement_notes": [
+    "Direct OpenAI HTTP 401 is authentication-blocked, not context-limit evidence.",
+    "Cloudflare HTTP 413 is request rejection, not reasoning failure.",
+    "Copilot HTTP 502 at 900k wraps upstream 400 naming an 872000-token prompt limit.",
+    "Known costs are list-price estimates; failures without usage remain unknown.",
+    "OpenAI masked key identifiers removed from HTTP 401 error text before archiving."
+  ]
+}

@@ -1,0 +1,991 @@
+{
+  "encoding": "sorted compact UTF-8 JSON",
+  "longstate_generation": "build_longstate_cases(target, family=family, seed=0), default positions and per_position",
+  "families": [
+    {
+      "family": "routing-synthetic",
+      "case_count": 20,
+      "question_count": 60,
+      "canonical_cases_sha256": "460a3cc783bfda79ebfb973e4929c91546ca482b8e57846fadc0f87d8e506b12",
+      "cases": [
+        {
+          "case_id": "routing-synthetic-000",
+          "sha256": "6edd71a03fec1ed571a6a4b7716f4acd243d3916407d776add4723d1fa70c7ea",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 57
+        },
+        {
+          "case_id": "routing-synthetic-001",
+          "sha256": "cfcc88d943f0ec089038fd1c58f096c7a8f8c50743f9125c705ad510e4a2cb77",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 59
+        },
+        {
+          "case_id": "routing-synthetic-002",
+          "sha256": "25cc3251dcbe601ba31d59cc319191329c008027cc68255acf7dd94ff0081f45",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 49
+        },
+        {
+          "case_id": "routing-synthetic-003",
+          "sha256": "8b1f32d8053501cb72e68166d0ecd499f7d467cbd6d376fa1548ec48d1bcb9d2",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 50
+        },
+        {
+          "case_id": "routing-synthetic-004",
+          "sha256": "2201a334c1b78a6efcb4ad53311a06c211036b9c2511ebd1b6bc23314496e451",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 47
+        },
+        {
+          "case_id": "routing-synthetic-005",
+          "sha256": "06fd948f7a2fe098b1a2303a15bd7f85b45cf64dd5e2407193847b852a83f8cb",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 56
+        },
+        {
+          "case_id": "routing-synthetic-006",
+          "sha256": "885b5657fbc12e2d622bc995ee9198aa1a307f79b8361d0cad39286879ea02bf",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 56
+        },
+        {
+          "case_id": "routing-synthetic-007",
+          "sha256": "94668077a2140cbb050daf92f47ff44d0f9c641ef71e1846e74e1168d4b61713",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 47
+        },
+        {
+          "case_id": "routing-synthetic-008",
+          "sha256": "98b63af4a586fcb522760924984bc618db30bd14ab12dc1e1b0182d70b12a64a",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 40
+        },
+        {
+          "case_id": "routing-synthetic-009",
+          "sha256": "2ce98a0891b9aeabaa2d7967687be48e4d5a121cf2962ff9111ed76e9115c612",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 46
+        },
+        {
+          "case_id": "routing-synthetic-010",
+          "sha256": "8f7a52b2ad6bf4d3be490dde3400cc2189d99b7c87792304651a373d034d421b",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 57
+        },
+        {
+          "case_id": "routing-synthetic-011",
+          "sha256": "0cd416230b12af6ed7010bd9f1f7154e1043deb0e5446784fd5f9a5d2485871b",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 54
+        },
+        {
+          "case_id": "routing-synthetic-012",
+          "sha256": "f09874aeff84f3ac729f7159f55c180cafd328ceb40abc1b57277050d0a90bcd",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 55
+        },
+        {
+          "case_id": "routing-synthetic-013",
+          "sha256": "22c419e0babbf1d5c70ee54eb20ddf2b0cd3444e0fe4786413e927d74425dee1",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 55
+        },
+        {
+          "case_id": "routing-synthetic-014",
+          "sha256": "511121a6deb1c81e1866898594c76e8a39bf6f406d476875b1f1bc48319c7061",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 46
+        },
+        {
+          "case_id": "routing-synthetic-015",
+          "sha256": "b24bcf703af4ddd5768a70b4e04b485db70b8919efe5fc9df70efc446c74d06a",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 51
+        },
+        {
+          "case_id": "routing-synthetic-016",
+          "sha256": "f8483c4884772fc1b8dac8006a4363810f28028fc6e8a88d41cef091edd51f93",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 57
+        },
+        {
+          "case_id": "routing-synthetic-017",
+          "sha256": "805eb7ba1de56e1c96ccaabc54116814c7f2827f9799dbac5eb6457786a715a4",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 60
+        },
+        {
+          "case_id": "routing-synthetic-018",
+          "sha256": "03641bad791a455806eb319e703c513f090a297f2c8d080a21c40aecff1caac0",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 68
+        },
+        {
+          "case_id": "routing-synthetic-019",
+          "sha256": "69b274db8a011f7e3e1d5219fba138d01e03b5ea5320a78936e81683feff8d1a",
+          "questions": [
+            "department",
+            "is_urgent",
+            "frustration"
+          ],
+          "approx_tokens": 55
+        }
+      ]
+    },
+    {
+      "family": "banking77",
+      "case_count": 20,
+      "question_count": 20,
+      "canonical_cases_sha256": "85b32035e7b9b067a10011a43a9bbc412fd42763634ad82946709322cf07ade1",
+      "cases": [
+        {
+          "case_id": "banking77-00004",
+          "sha256": "1361908cccbb3351e32126383097567bb9732f676e4109b52029557da6bd8ef2",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 7
+        },
+        {
+          "case_id": "banking77-00057",
+          "sha256": "e9fe2cb806fbde761b19f4f149efb40ea0de5bb5d94c46c8959f7dd162b83fd6",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 12
+        },
+        {
+          "case_id": "banking77-00135",
+          "sha256": "5b18c6b7466caa498a015c8c569f6d55aedaff3e6f7f1ed869e9ee2c6f94e784",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 14
+        },
+        {
+          "case_id": "banking77-00165",
+          "sha256": "debbc717761785e01575dd91a128096cbfe1070a35f4db2cfa8c6bc3fba7ef1c",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 13
+        },
+        {
+          "case_id": "banking77-00255",
+          "sha256": "d142ca304496f864b44b90cf072db4530e4bb6d162bd442c6ddc3f18cbc33caa",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 8
+        },
+        {
+          "case_id": "banking77-00257",
+          "sha256": "7de36147b29f46a1686e48eb084d07c09faf4036246268a3775929ff8c7faa90",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 13
+        },
+        {
+          "case_id": "banking77-00302",
+          "sha256": "dc9c79a9bb638b77a6a6af668f0df5f6829da1bcb7c4323bfd3b046a50ee02d8",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 11
+        },
+        {
+          "case_id": "banking77-00329",
+          "sha256": "671932f9b24e7fb83d6ee5966a0673d87fb7125bc12dfcc9355503ca1b2aefb4",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 19
+        },
+        {
+          "case_id": "banking77-00373",
+          "sha256": "6e5168b1098caaade9ef3d70c2accb4acd83de39abb78c18f942dbd0fbb6c5f2",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 6
+        },
+        {
+          "case_id": "banking77-00375",
+          "sha256": "f2a565c07f82287674f89f9e709f2099ffa3affaf1c8710a761ad0b98048c3d9",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 6
+        },
+        {
+          "case_id": "banking77-00382",
+          "sha256": "6d1908eaf674386082655190c21e965b7b014c7c19e9c034728032ed883580c2",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 4
+        },
+        {
+          "case_id": "banking77-00388",
+          "sha256": "f30df95c53b518f23f6fd901a24f4da3146ca61ab973a149a9bd8cac6520e43d",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 10
+        },
+        {
+          "case_id": "banking77-00404",
+          "sha256": "037a98f76aaec47a8df28c069b8eaf22483b2ffeb43b58d118184df2c947dc32",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 6
+        },
+        {
+          "case_id": "banking77-00412",
+          "sha256": "e11d7e893e063d7b88575d9d6ce576689e19818bb0c844084267f3f0c54b902c",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 16
+        },
+        {
+          "case_id": "banking77-00446",
+          "sha256": "efe18a9db5937bd0d006c5de65c04d03f3d726a24a17ed736726176f05d1c1cc",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 12
+        },
+        {
+          "case_id": "banking77-00511",
+          "sha256": "62e58a5d7f92621528f0596f4a1a528f5f72e6f251f3a4717e1f645378a12777",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 12
+        },
+        {
+          "case_id": "banking77-00570",
+          "sha256": "81d72973a266028d227b63775d33abcec7d06f9a5ad4c1d491a9fb49c3a8b40f",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 23
+        },
+        {
+          "case_id": "banking77-00572",
+          "sha256": "c879a0738475f76dd8e9b023a1233b3958c2594346a707ed39c3a6ccec82deff",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 6
+        },
+        {
+          "case_id": "banking77-00583",
+          "sha256": "d71c380e91655b84dcb3ce0963ba6b2f6a0db3b95fe398e9d76189d4f355588b",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 12
+        },
+        {
+          "case_id": "banking77-00601",
+          "sha256": "7b4cf5a9aaf9a4b844839fdf5cc6040bd24c36694bc642fa547d21415aac794d",
+          "questions": [
+            "intent"
+          ],
+          "approx_tokens": 14
+        }
+      ]
+    },
+    {
+      "family": "longstate-8k",
+      "case_count": 6,
+      "question_count": 12,
+      "canonical_cases_sha256": "75d7adfef55b3cf2a3735145605f8ddc3d8d83cc1d77391bec9513887b1d1d4d",
+      "cases": [
+        {
+          "case_id": "longstate-8k-p10-0",
+          "sha256": "241b5f423123bbe17210d4c8314868908061ab19fc6b6d84cf71e21b3539baa3",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 7991
+        },
+        {
+          "case_id": "longstate-8k-p10-1",
+          "sha256": "f5cbd2f9de214afca1396e519968487aec56fe7bb155ed85428931dafa9a1637",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 8008
+        },
+        {
+          "case_id": "longstate-8k-p50-0",
+          "sha256": "7ab16e5928fbeddc4bfca3a7cf2c550cd350ecbd8313f0697c0cf2a66bca56fe",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 7994
+        },
+        {
+          "case_id": "longstate-8k-p50-1",
+          "sha256": "6d955b64cce3fa82fc30b6e15da73b064524dc0e2ed066e6544a706c42c1d525",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 7990
+        },
+        {
+          "case_id": "longstate-8k-p90-0",
+          "sha256": "dd2ad387799952a7990359061a3d0cc19f08ade0db7c474628a17bd26a2760ca",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 8009
+        },
+        {
+          "case_id": "longstate-8k-p90-1",
+          "sha256": "76c0331278ee84cd08b9e18454df01383eaf2eaca3124055f3e3ca6924fda14a",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 7981
+        }
+      ]
+    },
+    {
+      "family": "longstate-16k",
+      "case_count": 6,
+      "question_count": 12,
+      "canonical_cases_sha256": "558084bf5896882a16a8bc20186da8fe52f62de3253808b453afb7f8b1219377",
+      "cases": [
+        {
+          "case_id": "longstate-16k-p10-0",
+          "sha256": "d944dd5d497b18fdcc47696629deeea134400542230bfacccb334df7afceac8e",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 16033
+        },
+        {
+          "case_id": "longstate-16k-p10-1",
+          "sha256": "91ddccf0d717be8dee88a67d0096a748311d35a1f1fe2c2f6a97b3362076f92a",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 16014
+        },
+        {
+          "case_id": "longstate-16k-p50-0",
+          "sha256": "f083c903112d77b6877ab23ddc5034f54ff905e8dd8ef969f87db86af3dd21e4",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 16048
+        },
+        {
+          "case_id": "longstate-16k-p50-1",
+          "sha256": "cf264a47f7b5ed3a48cf61beb51a02d97f525afa6476a03cc5a8b75e5feb9260",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 16069
+        },
+        {
+          "case_id": "longstate-16k-p90-0",
+          "sha256": "66d9a917f4af0d57cd78b89e3c8364c5fca7babcdfbab8aa1c39d3256237822e",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 16045
+        },
+        {
+          "case_id": "longstate-16k-p90-1",
+          "sha256": "140c4f6e2f6fea97682c4443e6de562da74a64f6e61cf8f440b3bd5307d4802b",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 16044
+        }
+      ]
+    },
+    {
+      "family": "longstate-24k",
+      "case_count": 6,
+      "question_count": 12,
+      "canonical_cases_sha256": "71d60ff525e0feb942d11ffcf9d15f864bab4e63ba4e2bfa868d9688d97baa96",
+      "cases": [
+        {
+          "case_id": "longstate-24k-p10-0",
+          "sha256": "9036bcc057ba05863e9fc8e5c52dc4ee454a5a5958e04f69fe5116ecbd6d0049",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 24008
+        },
+        {
+          "case_id": "longstate-24k-p10-1",
+          "sha256": "fc383dfef9857e6ad86a1150cce6a13855967de2b3e434972d78b54106d07a35",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 24042
+        },
+        {
+          "case_id": "longstate-24k-p50-0",
+          "sha256": "5c8320720f7b7df7a11a9ca1d1fc558ccf71fb9c4cbec4812e25ca8b8b7c885b",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 24006
+        },
+        {
+          "case_id": "longstate-24k-p50-1",
+          "sha256": "41e75cd14d4516b823ad8f7c786465f270b78a29d3495a04aedb19e0f598307a",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 24052
+        },
+        {
+          "case_id": "longstate-24k-p90-0",
+          "sha256": "7de76e7fe63de837cafc56d4b966becfbb91c3f353899a010660d3fee53b8db0",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 24047
+        },
+        {
+          "case_id": "longstate-24k-p90-1",
+          "sha256": "1aa9ec4d11e20b16d2fd9227abbd81b2f4531053b50d91941cb534d82dec0807",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 24023
+        }
+      ]
+    },
+    {
+      "family": "longstate-32k",
+      "case_count": 6,
+      "question_count": 12,
+      "canonical_cases_sha256": "19dda5f91ab3b4c28f36c58c37f975a6528d3f66bcf1c2b88783f452dc81400c",
+      "cases": [
+        {
+          "case_id": "longstate-32k-p10-0",
+          "sha256": "10f6fc26ee4a5b00a54f59125537f16140f0404e8a6fa1ab567cc2cc97e864d9",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 32029
+        },
+        {
+          "case_id": "longstate-32k-p10-1",
+          "sha256": "21f25726c06d66638a2fd7f2c3c8cdd246f1e2818ad4168d3558e844b7ff4fb2",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 32055
+        },
+        {
+          "case_id": "longstate-32k-p50-0",
+          "sha256": "495c8484e5c190df17d17a118e76dc4a0171fdcfb67ecd4c357a8437d021363d",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 32040
+        },
+        {
+          "case_id": "longstate-32k-p50-1",
+          "sha256": "c564d6bb70d56cd96c4f0190bd8686731b5e809660c0398b5e34b814ebe0292a",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 32013
+        },
+        {
+          "case_id": "longstate-32k-p90-0",
+          "sha256": "dd89abd0d9887b28725d1d285fd51b725cab94d99b11ad9eba96bf09a3ed255e",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 32040
+        },
+        {
+          "case_id": "longstate-32k-p90-1",
+          "sha256": "b0dace96c2eae5f7d04743671e9fe520e71941de7d2e80d388b2619e3b2c350b",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 32032
+        }
+      ]
+    },
+    {
+      "family": "longstate-64k",
+      "case_count": 6,
+      "question_count": 12,
+      "canonical_cases_sha256": "0c9588c4381651ec4ed819426f261703a9793563da8a09ec42f742fd6230a1bc",
+      "cases": [
+        {
+          "case_id": "longstate-64k-p10-0",
+          "sha256": "40ea19d2e81758ebd52bf8d14d602e4cfb1ad904c0061c7c84871c1ed67aff08",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 64066
+        },
+        {
+          "case_id": "longstate-64k-p10-1",
+          "sha256": "ed5a9a24a3ca10251b5e24dc098ed24b915752494b53470e2f65fc2506fe9813",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 64043
+        },
+        {
+          "case_id": "longstate-64k-p50-0",
+          "sha256": "89cdfd4ea2192199f85aab1fb864aea8c7b7be3e877b1292efdeed744de2f51c",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 64059
+        },
+        {
+          "case_id": "longstate-64k-p50-1",
+          "sha256": "f118ae2a42f56327dedacc5eef459f7af670c40ccfd2269c2ba8aa1d795ff95e",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 64045
+        },
+        {
+          "case_id": "longstate-64k-p90-0",
+          "sha256": "fc14c8c5b5b9db4552150ee6cd3e3fa7d5756db65ab43fda12c279eccb11c824",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 64052
+        },
+        {
+          "case_id": "longstate-64k-p90-1",
+          "sha256": "cb0ef1a4169774df0f558da92643b52cac1d9206af933510cbd3addf6f45dfc9",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 64014
+        }
+      ]
+    },
+    {
+      "family": "longstate-128k",
+      "case_count": 6,
+      "question_count": 12,
+      "canonical_cases_sha256": "c8c066d252caed8cc88ddeb24fe409d3ce6cef0e8d167859843015a0ab7055f9",
+      "cases": [
+        {
+          "case_id": "longstate-128k-p10-0",
+          "sha256": "c5fc493ba63ecfab80ae5febb2d8ebfd85bd113c7e3c6920ba5bd80099a7fd97",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 128002
+        },
+        {
+          "case_id": "longstate-128k-p10-1",
+          "sha256": "d9406bf77d5ae888d3993db43e05fbfbe14f7b7a82fe5272c9ae6af71e1a1a2d",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 128070
+        },
+        {
+          "case_id": "longstate-128k-p50-0",
+          "sha256": "bd27c3a92a482c3de7963e7bc4997cc5470a448c466e1bbc99c30c9414cd529b",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 128046
+        },
+        {
+          "case_id": "longstate-128k-p50-1",
+          "sha256": "2b6226690ceddb4b2206c584c2220c7f79bc773ee7e225b55ce0e26dae0dc955",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 128069
+        },
+        {
+          "case_id": "longstate-128k-p90-0",
+          "sha256": "06bee16c933d2da8368a7ca0dcd2461f08cbedcec44a0734c8898ac34e086838",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 128033
+        },
+        {
+          "case_id": "longstate-128k-p90-1",
+          "sha256": "49ac1f625338e0ef7f22c2bc620baa1872fcf3714e25acc6ec5746fe2d0f31d6",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 128050
+        }
+      ]
+    },
+    {
+      "family": "longstate-256k",
+      "case_count": 6,
+      "question_count": 12,
+      "canonical_cases_sha256": "2da2505117f63673f146f97bd40a7bb8f63673b9112e4819a967246bd92801dc",
+      "cases": [
+        {
+          "case_id": "longstate-256k-p10-0",
+          "sha256": "21d27c51382bf8e58524653bc7b24dfb98e8c0c2e80907d9a667910e83168904",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 256004
+        },
+        {
+          "case_id": "longstate-256k-p10-1",
+          "sha256": "7d89f98187f182d4ad8a3c08616c063d14dd852c73af26923cb4080aa00a8011",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 256064
+        },
+        {
+          "case_id": "longstate-256k-p50-0",
+          "sha256": "b5bc755ab98a441a257ca38b0537ffccbe0864ddefa534111da489ff545d59cb",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 256009
+        },
+        {
+          "case_id": "longstate-256k-p50-1",
+          "sha256": "58988d3dc56a30085d611e65945a3eabd6cb9e34ca63ee718498f489e32fb4c3",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 256014
+        },
+        {
+          "case_id": "longstate-256k-p90-0",
+          "sha256": "0b2d3df13755dcf77c90f6b49369f2bd327656998f86ad172e115a444931d1e8",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 256019
+        },
+        {
+          "case_id": "longstate-256k-p90-1",
+          "sha256": "fa3514ca68ed3ac34dfbf068d7e696f04c758ad85a267ff1ecc0d6ccbb60576d",
+          "questions": [
+            "team",
+            "mentions_breach"
+          ],
+          "approx_tokens": 256048
+        }
+      ]
+    },
+    {
+      "family": "rendered-images",
+      "case_count": 20,
+      "question_count": 27,
+      "canonical_cases_sha256": "2f95a6b4339d0c5f29f1a53082edcd01b8358e4d83d9c1cee5a8aea68ece1acb",
+      "cases": [
+        {
+          "case_id": "rendered-images-000",
+          "sha256": "d7d5fdd8942e30a954f16fc55110b4371d1e7a0c52772db7d4d4e584581db179",
+          "questions": [
+            "above_1000",
+            "currency"
+          ],
+          "approx_tokens": 16
+        },
+        {
+          "case_id": "rendered-images-001",
+          "sha256": "8018c0aa262477f57c005376150d2fed2650e795713f6e9980add133375f5c70",
+          "questions": [
+            "highlighted"
+          ],
+          "approx_tokens": 22
+        },
+        {
+          "case_id": "rendered-images-002",
+          "sha256": "c45e4834687a016ac35bd3734317aab9da4f46e0fe5340ab7f0cd61693f88393",
+          "questions": [
+            "color"
+          ],
+          "approx_tokens": 17
+        },
+        {
+          "case_id": "rendered-images-003",
+          "sha256": "0063cb6088745f20aaf12f1a3e42798ae19fc35f4b8222918b10a758c3fe396e",
+          "questions": [
+            "above_1000",
+            "currency"
+          ],
+          "approx_tokens": 16
+        },
+        {
+          "case_id": "rendered-images-004",
+          "sha256": "0a14eb7d5e55bf345df2fa4a6314ded2c81d7ac816841edd8f26d9b177e75523",
+          "questions": [
+            "highlighted"
+          ],
+          "approx_tokens": 22
+        },
+        {
+          "case_id": "rendered-images-005",
+          "sha256": "a323d2db181d47cf7cee32d97d44892fb508a6e58873fa6437c095d88a31262c",
+          "questions": [
+            "color"
+          ],
+          "approx_tokens": 17
+        },
+        {
+          "case_id": "rendered-images-006",
+          "sha256": "b93845609d744af394130960ff2ee901c8eba8e575d3125fb1f198c2e30a3df8",
+          "questions": [
+            "above_1000",
+            "currency"
+          ],
+          "approx_tokens": 16
+        },
+        {
+          "case_id": "rendered-images-007",
+          "sha256": "a4865e4b85346f18bc7207c33b22f7e2c51768af41eb4db3ce707c0255d3fd78",
+          "questions": [
+            "highlighted"
+          ],
+          "approx_tokens": 22
+        },
+        {
+          "case_id": "rendered-images-008",
+          "sha256": "f1990d13183962d05907a546fce7db8c887070e25247ef528147a7fe0a8b9e39",
+          "questions": [
+            "color"
+          ],
+          "approx_tokens": 17
+        },
+        {
+          "case_id": "rendered-images-009",
+          "sha256": "ccf1d36eee72b0c1721345856c9584282f1152ff782d31cfabb8f5d01453f66c",
+          "questions": [
+            "above_1000",
+            "currency"
+          ],
+          "approx_tokens": 16
+        },
+        {
+          "case_id": "rendered-images-010",
+          "sha256": "b3ec46a3be56b2470789f725abe6bfee06ef8e85bf45188f9a57c530ee28a873",
+          "questions": [
+            "highlighted"
+          ],
+          "approx_tokens": 22
+        },
+        {
+          "case_id": "rendered-images-011",
+          "sha256": "8efb0c5947c5790a05c82564d7072f7e576f2edc6bf264f002fb272367f4ee0b",
+          "questions": [
+            "color"
+          ],
+          "approx_tokens": 17
+        },
+        {
+          "case_id": "rendered-images-012",
+          "sha256": "533ff37672803d55be7a1b463d14f398d546776b3e0301b4d977ba27e1fe9468",
+          "questions": [
+            "above_1000",
+            "currency"
+          ],
+          "approx_tokens": 16
+        },
+        {
+          "case_id": "rendered-images-013",
+          "sha256": "61b01eb05ab46757a9cb016a28c87b4a7a7282b1f10e36a36d227d3b491a130c",
+          "questions": [
+            "highlighted"
+          ],
+          "approx_tokens": 22
+        },
+        {
+          "case_id": "rendered-images-014",
+          "sha256": "46a6f16d9647a2d3b2a954ba9b85768b8fef6fcceeca28a08306509a05a5ff29",
+          "questions": [
+            "color"
+          ],
+          "approx_tokens": 17
+        },
+        {
+          "case_id": "rendered-images-015",
+          "sha256": "1444b6f8cc60522ed290a5a2c7e0d39f9aead32281c6ebe005faadd4f3154e2b",
+          "questions": [
+            "above_1000",
+            "currency"
+          ],
+          "approx_tokens": 16
+        },
+        {
+          "case_id": "rendered-images-016",
+          "sha256": "d5afd8b972b3587c27aac12b45e6cfcfa8e112345798d68384a536157c70015f",
+          "questions": [
+            "highlighted"
+          ],
+          "approx_tokens": 22
+        },
+        {
+          "case_id": "rendered-images-017",
+          "sha256": "bfe6c62bc4404ab303e429ab09084b29fe5b02c352b2aad12089af8c202f7a1a",
+          "questions": [
+            "color"
+          ],
+          "approx_tokens": 17
+        },
+        {
+          "case_id": "rendered-images-018",
+          "sha256": "ce469bdafe875bcea7a518b5f9e76960f687b3172e1af8e5a3615db9b962cc17",
+          "questions": [
+            "above_1000",
+            "currency"
+          ],
+          "approx_tokens": 16
+        },
+        {
+          "case_id": "rendered-images-019",
+          "sha256": "b50210b4a630b02f8a9299174bcee8e4d77f21da6dcdb3d4f07d283000ab7e4e",
+          "questions": [
+            "highlighted"
+          ],
+          "approx_tokens": 22
+        }
+      ]
+    }
+  ]
+}

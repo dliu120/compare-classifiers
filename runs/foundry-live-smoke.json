@@ -1,0 +1,72 @@
+{
+  "model": "decision-1",
+  "http_status": 200,
+  "unauthenticated_status": 401,
+  "latency_s": 0.471803207998164,
+  "request": {
+    "model": "decision-1",
+    "state": "Hi, I've been trying to connect my Stripe account for 3 days and the integration keeps failing. I'm losing sales. Please help ASAP.",
+    "questions": {
+      "department": {
+        "type": "choice",
+        "instructions": "Which team should handle this?",
+        "criteria": {
+          "billing": "Payment or subscription issues",
+          "technical": "Bugs or integration problems",
+          "sales": "Pricing or account questions"
+        }
+      },
+      "frustration": {
+        "type": "score",
+        "instructions": "How frustrated does the customer appear?",
+        "criteria": [
+          "Calm, just stating facts",
+          "Frustrated but civil",
+          "Very angry"
+        ]
+      },
+      "is_urgent": {
+        "type": "noul",
+        "instructions": "Does this message convey urgency?"
+      }
+    }
+  },
+  "response": {
+    "model": "microsoft-decision-1",
+    "answers": {
+      "department": {
+        "choice": "technical",
+        "confidence": 0.9945138240117721,
+        "probabilities": {
+          "billing": 0.0031711405109077365,
+          "sales": 0.00048631014791086546,
+          "technical": 0.9963425493411815
+        },
+        "type": "choice"
+      },
+      "frustration": {
+        "confidence": 0.9885481000866525,
+        "legend": {
+          "0": "Calm, just stating facts",
+          "1": "Frustrated but civil",
+          "2": "Very angry"
+        },
+        "probabilities": {
+          "0": 0.003579028890959471,
+          "1": 0.9923654000577683,
+          "2": 0.004055571051272203
+        },
+        "score": 1.0004765421603128,
+        "type": "score"
+      },
+      "is_urgent": {
+        "noul": 0.9982992773099812,
+        "type": "noul"
+      }
+    },
+    "usage": {
+      "input_tokens": 132,
+      "output_tokens": 3
+    }
+  }
+}

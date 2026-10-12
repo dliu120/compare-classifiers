@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="472" viewBox="0 0 800 472" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title>Chance-corrected accuracy against cost per 1k Cases</title>
+<text x="72" y="28" fill="#898781" font-size="15" font-weight="600">Chance-corrected accuracy vs cost per 1k Cases (log x)</text>
+<line x1="72.0" y1="336.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="1.0"/>
+<line x1="72.0" y1="56.0" x2="72.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="1.0"/>
+<line x1="72.0" y1="336.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="340.0" fill="#898781" text-anchor="end">-0.50</text>
+<line x1="72.0" y1="289.3" x2="776.0" y2="289.3" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="293.3" fill="#898781" text-anchor="end">-0.25</text>
+<line x1="72.0" y1="242.7" x2="776.0" y2="242.7" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="246.7" fill="#898781" text-anchor="end">0.00</text>
+<line x1="72.0" y1="196.0" x2="776.0" y2="196.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="200.0" fill="#898781" text-anchor="end">0.25</text>
+<line x1="72.0" y1="149.3" x2="776.0" y2="149.3" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="153.3" fill="#898781" text-anchor="end">0.50</text>
+<line x1="72.0" y1="102.7" x2="776.0" y2="102.7" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="106.7" fill="#898781" text-anchor="end">0.75</text>
+<line x1="72.0" y1="56.0" x2="776.0" y2="56.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="60.0" fill="#898781" text-anchor="end">1.00</text>
+<line x1="120.0" y1="56.0" x2="120.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="120.0" y="354" fill="#898781" text-anchor="middle">$0.001</text>
+<line x1="284.0" y1="56.0" x2="284.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="284.0" y="354" fill="#898781" text-anchor="middle">$0.01</text>
+<line x1="448.0" y1="56.0" x2="448.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="448.0" y="354" fill="#898781" text-anchor="middle">$0.1</text>
+<line x1="612.0" y1="56.0" x2="612.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="612.0" y="354" fill="#898781" text-anchor="middle">$1</text>
+<line x1="776.0" y1="56.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="776.0" y="354" fill="#898781" text-anchor="middle">$10</text>
+<text x="88" y="354" fill="#898781" text-anchor="middle">free</text>
+<text x="424" y="374" fill="#898781" text-anchor="middle">cost per 1k Cases (USD, log scale)</text>
+<text transform="translate(18 196) rotate(-90)" fill="#898781" text-anchor="middle">chance-corrected accuracy</text>
+<rect x="83.0" y="313.7" width="10.0" height="10.0" fill="#d88a3a"/>
+<text x="96.0" y="310.7" fill="#898781" font-size="11" text-anchor="start">decision-1 (Microsoft Foundry) · rendered-images</text>
+<rect x="278.7" y="60.5" width="10.0" height="10.0" fill="#d88a3a"/>
+<text x="291.7" y="109.5" fill="#898781" font-size="11" text-anchor="start">decision-1 (Microsoft Foundry) · routing-synthetic</text>
+<rect x="342.2" y="88.8" width="10.0" height="10.0" fill="#d88a3a"/>
+<text x="355.2" y="124.8" fill="#898781" font-size="11" text-anchor="start">decision-1 (Microsoft Foundry) · banking77</text>
+<path d="M436.5 70.5 L446.5 80.5 M436.5 80.5 L446.5 70.5" stroke="#9085e9" stroke-width="3"/>
+<text x="433.5" y="80.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · no cap · rendered-…</text>
+<path d="M443.9 60.5 L453.9 70.5 M443.9 70.5 L453.9 60.5" stroke="#9085e9" stroke-width="3"/>
+<text x="440.9" y="148.5" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · no cap · routing-s…</text>
+<path d="M546.2 79.4 L556.2 89.4 M546.2 89.4 L556.2 79.4" stroke="#9085e9" stroke-width="3"/>
+<text x="543.2" y="167.4" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · no cap · banking77</text>
+<path d="M691.5 51.0 L701.5 61.0 M691.5 61.0 L701.5 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="688.5" y="48.0" fill="#898781" font-size="11" text-anchor="end">gpt-6-luna (copilot) · effort none · no cap · longstate…</text>
+<rect x="73.0" y="375.0" width="10.0" height="10.0" fill="#d88a3a"/>
+<text x="92" y="384" fill="#898781">foundry</text>
+<path d="M73.0 393.0 L83.0 403.0 M73.0 403.0 L83.0 393.0" stroke="#9085e9" stroke-width="3"/>
+<text x="92" y="402" fill="#898781">ownbuild</text>
+<text x="72" y="426" fill="#898781" font-weight="600">Unknown cost, not plotted:</text>
+<text x="84" y="444" fill="#898781">decision-1 (Microsoft Foundry) · longstate-32k (chance-corrected -0.538)</text>
+</svg>

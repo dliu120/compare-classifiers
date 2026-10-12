@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="706" viewBox="0 0 800 706" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="12">
+<title>Chance-corrected accuracy against cost per 1k Cases</title>
+<text x="72" y="28" fill="#898781" font-size="15" font-weight="600">Chance-corrected accuracy vs cost per 1k Cases (log x)</text>
+<line x1="72.0" y1="336.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="1.0"/>
+<line x1="72.0" y1="56.0" x2="72.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="1.0"/>
+<line x1="72.0" y1="336.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="340.0" fill="#898781" text-anchor="end">0.00</text>
+<line x1="72.0" y1="266.0" x2="776.0" y2="266.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="270.0" fill="#898781" text-anchor="end">0.25</text>
+<line x1="72.0" y1="196.0" x2="776.0" y2="196.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="200.0" fill="#898781" text-anchor="end">0.50</text>
+<line x1="72.0" y1="126.0" x2="776.0" y2="126.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="130.0" fill="#898781" text-anchor="end">0.75</text>
+<line x1="72.0" y1="56.0" x2="776.0" y2="56.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="64" y="60.0" fill="#898781" text-anchor="end">1.00</text>
+<line x1="120.0" y1="56.0" x2="120.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="120.0" y="354" fill="#898781" text-anchor="middle">$100</text>
+<line x1="776.0" y1="56.0" x2="776.0" y2="336.0" stroke="#898781" stroke-width="1" opacity="0.25"/>
+<text x="776.0" y="354" fill="#898781" text-anchor="middle">$1000</text>
+<text x="424" y="374" fill="#898781" text-anchor="middle">cost per 1k Cases (USD, log scale)</text>
+<text transform="translate(18 196) rotate(-90)" fill="#898781" text-anchor="middle">chance-corrected accuracy</text>
+<path d="M122.1 51.0 L132.1 61.0 M122.1 61.0 L132.1 51.0" stroke="#9085e9" stroke-width="3"/>
+<text x="135.1" y="48.0" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · no cap · longstate…</text>
+<path d="M237.5 122.8 L247.5 132.8 M237.5 132.8 L247.5 122.8" stroke="#9085e9" stroke-width="3"/>
+<text x="250.5" y="119.8" fill="#898781" font-size="11" text-anchor="start">gpt-6-luna (copilot) · effort none · no cap · longstate…</text>
+<polygon points="78.0,374.0 72.0,385.0 84.0,385.0" fill="#199e70"/>
+<text x="92" y="384" fill="#898781">cloudflare</text>
+<path d="M72.0 398.0 H84.0 M78.0 392.0 V404.0" stroke="#d55181" stroke-width="3"/>
+<text x="92" y="402" fill="#898781">openai-decisions</text>
+<path d="M73.0 411.0 L83.0 421.0 M73.0 421.0 L83.0 411.0" stroke="#9085e9" stroke-width="3"/>
+<text x="92" y="420" fill="#898781">ownbuild</text>
+<text x="72" y="444" fill="#898781" font-weight="600">Unknown cost, not plotted:</text>
+<text x="84" y="462" fill="#898781">clef (Cloudflare) · longstate-512k (chance-corrected -0.538)</text>
+<text x="84" y="480" fill="#898781">clef-flash (Cloudflare) · longstate-512k (chance-corrected -0.538)</text>
+<text x="84" y="498" fill="#898781">gpt-6-luna (OpenAI Decisions) · longstate-512k (chance-corrected -0.538)</text>
+<text x="84" y="516" fill="#898781">gpt-6-luna (openai) · effort none · no cap · longstate-512k (chance-corrected -0.538)</text>
+<text x="84" y="534" fill="#898781">clef (Cloudflare) · longstate-768k (chance-corrected -0.538)</text>
+<text x="84" y="552" fill="#898781">clef-flash (Cloudflare) · longstate-768k (chance-corrected -0.538)</text>
+<text x="84" y="570" fill="#898781">gpt-6-luna (OpenAI Decisions) · longstate-768k (chance-corrected -0.538)</text>
+<text x="84" y="588" fill="#898781">gpt-6-luna (openai) · effort none · no cap · longstate-768k (chance-corrected -0.538)</text>
+<text x="84" y="606" fill="#898781">clef (Cloudflare) · longstate-900k (chance-corrected -0.538)</text>
+<text x="84" y="624" fill="#898781">clef-flash (Cloudflare) · longstate-900k (chance-corrected -0.538)</text>
+<text x="84" y="642" fill="#898781">gpt-6-luna (OpenAI Decisions) · longstate-900k (chance-corrected -0.538)</text>
+<text x="84" y="660" fill="#898781">gpt-6-luna (copilot) · effort none · no cap · longstate-900k (chance-corrected -0.538)</text>
+<text x="84" y="678" fill="#898781">gpt-6-luna (openai) · effort none · no cap · longstate-900k (chance-corrected -0.538)</text>
+</svg>

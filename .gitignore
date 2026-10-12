@@ -1,0 +1,12 @@
+.env
+.env.*
+!.env.example
+*.key
+__pycache__/
+.venv/
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+runs/**/raw/*.jsonl
+runs/foundry-deployment.json
+.DS_Store

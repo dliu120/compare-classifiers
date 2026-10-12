@@ -1,0 +1,24 @@
+{
+  "scenario": "verbatim docs/foundry-api.md usage snippet",
+  "response": {
+    "model": "microsoft-decision-1",
+    "answers": {
+      "team": {
+        "choice": "billing",
+        "confidence": 0.9970754529671961,
+        "probabilities": {
+          "account": 0.0013241933662780337,
+          "billing": 0.9980503019781307,
+          "technical": 0.0006255046555912747
+        },
+        "type": "choice"
+      }
+    },
+    "usage": {
+      "input_tokens": 66,
+      "output_tokens": 1
+    }
+  },
+  "expected_choice": "billing",
+  "observed_choice": "billing"
+}
