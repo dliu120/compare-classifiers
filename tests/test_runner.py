@@ -6,7 +6,9 @@ import hashlib
 import json
 from pathlib import Path
 
+import httpx
 import pytest
+import respx
 from typer.testing import CliRunner
 
 import bakeoff.providers
@@ -250,6 +252,41 @@ def test_run_writes_rows_and_raw_capture(fake_registry: list[FakeProvider], toy:
     assert record["cost_usd"] == pytest.approx(0.01)
     assert rows[0].cost_usd == pytest.approx(record["cost_usd"])
     assert "headers" not in json.dumps(record).lower()
+
+
+@respx.mock
+def test_liquid_reported_cost_is_saved_in_rows_and_raw_capture(toy: Settings) -> None:
+    reported_cost = 0.000123
+    route = respx.post("https://api.liquid.ai/decisions/v1/systemone").mock(
+        return_value=httpx.Response(
+            200,
+            json={
+                "model": "d1.1",
+                "answers": {
+                    "department": {
+                        "type": "choice",
+                        "choice": "billing",
+                        "probabilities": {"billing": 0.8, "technical": 0.1, "sales": 0.1},
+                    }
+                },
+                "usage": {"input_tokens": 10, "output_tokens": 0, "cost": reported_cost},
+            },
+        )
+    )
+    keyed_settings = toy.model_copy(update={"liquid_api_key": "liquid-test"})
+
+    summary = runner.run(["liquid/d1.1"], ["toy"], keyed_settings, limit=1)
+
+    assert route.call_count == 1
+    assert summary.cost_usd == pytest.approx(reported_cost)
+    with Store(toy.runs_dir) as store:
+        rows = store.rows("liquid-d1-1__toy")
+    capture = json.loads(
+        (toy.runs_dir / "raw" / "liquid-d1-1__toy.jsonl").read_text(encoding="utf-8")
+    )
+    assert rows[0].cost_usd == pytest.approx(reported_cost)
+    assert capture["cost_usd"] == pytest.approx(reported_cost)
+    assert capture["response_raw"]["usage"]["cost"] == pytest.approx(reported_cost)
 
 
 def test_run_resumes_without_duplicates(fake_registry: list[FakeProvider], toy: Settings) -> None:
