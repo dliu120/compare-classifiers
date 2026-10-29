@@ -74,20 +74,38 @@ of $0.01246.
 - [Smoke raw captures](../runs/raw/liquid-d1-1__banking77.jsonl.gz) and [sweep raw captures](../runs/input-cap-sweep/raw/liquid-d1-1__longstate-8k.jsonl.gz). The adjacent D1.1 captures use the same naming pattern.
 - [Liquid Console D1.1 decision models](https://console.liquid.ai/docs/getting-started/d1.1#decision-models), [public model documentation](https://docs.liquid.ai/lfm/models/d1), and [pricing](https://www.liquid.ai/pricing).
 
-To reproduce the smoke arm, configure `LIQUID_API_KEY` and run:
+From a clean checkout, generate the ignored deterministic long-state Families first; the other
+smoke Families used here are tracked under `data/smoke`:
+
+```sh
+uv run python - <<'PY'
+from datetime import date
+from pathlib import Path
+
+from bakeoff.datasets import longstate
+from bakeoff.datasets.family import write_family
+
+data_root = Path("data/smoke")
+for family, target in longstate.TARGETS.items():
+    cases = longstate.build_longstate_cases(target, family=family, seed=0)
+    write_family(data_root, longstate.manifest(family, date.today(), seed=0), cases)
+PY
+```
+
+To reproduce the smoke arm, configure `LIQUID_API_KEY` and use an empty run directory so the
+resumable runner sends new requests instead of reusing the checked-in results:
 
 ```sh
 uv run bakeoff run -p liquid/d1.1 \
   -f routing-synthetic -f banking77 -f longstate-32k -f rendered-images \
-  --limit 20 --runs-dir runs
+  --limit 20 --runs-dir "$(mktemp -d)"
 ```
 
-To reproduce the full input-length arm, first generate the deterministic `longstate-*` Families
-with `uv run bakeoff gen smoke --limit 20`, then run:
+To reproduce the full input-length arm, use a separate empty run directory:
 
 ```sh
 uv run bakeoff run -p liquid/d1.1 \
   -f longstate-8k -f longstate-16k -f longstate-24k -f longstate-32k \
   -f longstate-64k -f longstate-128k -f longstate-256k \
-  --runs-dir runs/input-cap-sweep
+  --runs-dir "$(mktemp -d)"
 ```
