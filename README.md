@@ -54,9 +54,7 @@ verified against an invoice. A live 64k-target request returned HTTP 422 and doc
 `--budget` or `BAKEOFF_BUDGET_USD` (default 50 USD) limits estimated and recorded spend, but an
 unknown-price request reserves $0 before it is sent. Requests whose responses omit cost add no
 amount to the spend total, and concurrent requests may finish after the limit is crossed; treat
-the budget as a best-effort stop, not a hard cap, for unpriced Providers. The `BudgetGuard`
-class docstring still says unknown-cost estimates are never zero; the estimator returns zero
-when a provider has no listed price.
+the budget as a best-effort stop, not a hard cap, for unpriced Providers.
 
 ## Commands
 

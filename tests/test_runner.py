@@ -247,6 +247,8 @@ def test_run_writes_rows_and_raw_capture(fake_registry: list[FakeProvider], toy:
     assert len(lines) == 4
     record = json.loads(lines[0])
     assert record["request_raw"]["questions"] and record["response_raw"] == {"ok": True}
+    assert record["cost_usd"] == pytest.approx(0.01)
+    assert rows[0].cost_usd == pytest.approx(record["cost_usd"])
     assert "headers" not in json.dumps(record).lower()
 
 
