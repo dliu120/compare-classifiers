@@ -53,7 +53,7 @@ TYPESAFE_ANSWERS: dict[str, Any] = {
 }
 
 
-def system_one(model: str, answers: dict[str, Any], usage: dict[str, int]) -> dict[str, Any]:
+def system_one(model: str, answers: dict[str, Any], usage: dict[str, Any]) -> dict[str, Any]:
     return {"model": model, "answers": answers, "usage": usage}
 
 
@@ -67,6 +67,9 @@ CLOUDFLARE_BODY = envelope(
     system_one("clef-flash", TYPESAFE_ANSWERS, {"input_tokens": 410, "output_tokens": 0})
 )
 LIQUID_BODY = system_one("d1", TYPESAFE_ANSWERS, {"input_tokens": 400, "output_tokens": 0})
+LIQUID_D1_1_BODY = system_one(
+    "d1.1", TYPESAFE_ANSWERS, {"input_tokens": 400, "output_tokens": 0, "cost": 0.000008}
+)
 
 # spec, provider id, endpoint, a realistic 200 body, price per M input, the key the header carries
 VENDORS = [
@@ -81,12 +84,13 @@ VENDORS = [
         id="cloudflare",
     ),
     pytest.param(
-        "liquid/d1", "liquid/d1", LIQUID_URL, LIQUID_BODY, 0.04, "liquid_test", id="liquid"
+        "liquid/d1", "liquid/d1", LIQUID_URL, LIQUID_BODY, 0.02, "liquid_test", id="liquid"
     ),
 ]
 IMAGE_TOP_LEVEL = [
     pytest.param("cloudflare/clef-flash", CLOUDFLARE_URL, CLOUDFLARE_BODY, id="cloudflare"),
     pytest.param("liquid/d1", LIQUID_URL, LIQUID_BODY, id="liquid"),
+    pytest.param("liquid/d1.1", LIQUID_URL, LIQUID_D1_1_BODY, id="liquid-d1.1"),
 ]
 
 
@@ -190,6 +194,50 @@ async def test_questions_pass_through_unchanged(
         "instructions": "Does this message convey urgency?",
     }
     assert result.request_raw == sent  # no images, so nothing to elide
+
+
+@respx.mock
+async def test_liquid_d1_1_uses_hosted_model_and_reported_cost(
+    settings: Settings, sample_request: SystemOneRequest
+) -> None:
+    route = respx.post(LIQUID_URL).mock(return_value=httpx.Response(200, json=LIQUID_D1_1_BODY))
+
+    result = await evaluate("liquid/d1.1", settings, sample_request)
+
+    assert result.provider_id == "liquid/d1.1"
+    assert sent_body(route)["model"] == "d1.1"
+    assert result.cost_usd == pytest.approx(0.000008)
+    assert make_provider("liquid/d1.1", settings).price_key == "d1.1"
+    assert make_provider("liquid/d1.1", settings).max_input_tokens == 65_536
+
+
+@respx.mock
+async def test_liquid_d1_1_without_reported_cost_stays_unknown(
+    settings: Settings, sample_request: SystemOneRequest
+) -> None:
+    body = system_one("d1.1", TYPESAFE_ANSWERS, {"input_tokens": 400, "output_tokens": 0})
+    respx.post(LIQUID_URL).mock(return_value=httpx.Response(200, json=body))
+
+    result = await evaluate("liquid/d1.1", settings, sample_request)
+
+    assert result.cost_usd is None
+
+
+@respx.mock
+@pytest.mark.parametrize("reported_cost", [True, "0.01", -0.01, 10**400])
+async def test_liquid_ignores_invalid_reported_cost(
+    reported_cost: Any, settings: Settings, sample_request: SystemOneRequest
+) -> None:
+    body = system_one(
+        "d1.1",
+        TYPESAFE_ANSWERS,
+        {"input_tokens": 400, "output_tokens": 0, "cost": reported_cost},
+    )
+    respx.post(LIQUID_URL).mock(return_value=httpx.Response(200, json=body))
+
+    result = await evaluate("liquid/d1.1", settings, sample_request)
+
+    assert result.cost_usd is None
 
 
 @respx.mock

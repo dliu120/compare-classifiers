@@ -60,12 +60,19 @@ def secrets_of(settings: Settings) -> list[str]:
     return [value for value in values if value]
 
 
-def is_over_limit(case: Case, provider: Provider) -> bool:
-    return (
+def is_over_limit(case: Case, provider: Provider, result: ProviderResult | None = None) -> bool:
+    exceeds_token_limit = (
         case.approx_tokens is not None
         and provider.max_input_tokens is not None
         and case.approx_tokens > provider.max_input_tokens
     )
+    rejected_for_input_limit = (
+        result is not None
+        and result.http_status in {413, 422}
+        and result.error is not None
+        and "input limit" in result.error.lower()
+    )
+    return exceeds_token_limit or rejected_for_input_limit
 
 
 def build_rows(
@@ -75,7 +82,7 @@ def build_rows(
     response = result.response
     usage = response.usage if response is not None else Usage()
     created_at = now_iso()
-    over_limit = is_over_limit(case, provider)
+    over_limit = is_over_limit(case, provider, result)
     rows = []
     for question_id, question in case.questions.items():
         answer = _answer_for(question_id, result)

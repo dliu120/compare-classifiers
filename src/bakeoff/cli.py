@@ -36,6 +36,7 @@ DEFAULT_PROBE_SPECS = [
     "jev",
     "cloudflare/clef-flash",
     "liquid/d1",
+    "liquid/d1.1",
     "openai-decisions",
     "foundry",
     "ownbuild/openai/gpt-6-luna?effort=none",  # the reference Route (docs/adr/0002)
@@ -149,7 +150,10 @@ def run(
     limit: Annotated[int | None, typer.Option(help="Cases per Family.")] = None,
     reps: Annotated[int, typer.Option(help="Repetitions per Case.")] = 1,
     runs_dir: Annotated[Path | None, typer.Option(help="Where results go.")] = None,
-    budget: Annotated[float | None, typer.Option(help="Spending cap in USD.")] = None,
+    budget: Annotated[
+        float | None,
+        typer.Option(help="Best-effort USD limit; unknown-price requests reserve $0."),
+    ] = None,
 ) -> None:
     """Evaluate Providers over Families; resumable, stops at the budget."""
     settings = load_settings()

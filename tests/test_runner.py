@@ -312,6 +312,36 @@ def test_run_flags_over_limit(fake_registry: list[FakeProvider], toy: Settings) 
     assert rows and all(row.over_limit for row in rows)
 
 
+def test_run_flags_reported_input_limit_rejection(toy: Settings) -> None:
+    case = write_toy_family(toy.data_dir)[0]
+    provider = FakeProvider()
+    result = ProviderResult(
+        provider_id=provider.id,
+        latency_s=0.1,
+        http_status=422,
+        error="HTTP 422: prompt is over the model's input limit",
+    )
+
+    rows = runner.build_rows("fake__toy", case, 0, provider, result)
+
+    assert rows and all(row.over_limit for row in rows)
+
+
+def test_run_does_not_flag_unrelated_http_422_as_over_limit(toy: Settings) -> None:
+    case = write_toy_family(toy.data_dir)[0]
+    provider = FakeProvider()
+    result = ProviderResult(
+        provider_id=provider.id,
+        latency_s=0.1,
+        http_status=422,
+        error="HTTP 422: invalid model name",
+    )
+
+    rows = runner.build_rows("fake__toy", case, 0, provider, result)
+
+    assert rows and not any(row.over_limit for row in rows)
+
+
 def test_run_counts_non_answers_and_unknown_costs(
     fake_registry: list[FakeProvider], toy: Settings
 ) -> None:

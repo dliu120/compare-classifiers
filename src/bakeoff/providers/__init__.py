@@ -4,7 +4,7 @@ A spec is ``<family>[/<path>...][?key=value&...]``:
 
     jev                         TypeSafe Jev (jev-1.13.0), text only
     cloudflare/clef|clef-flash  Cloudflare Workers AI Clef
-    liquid/d1|d1:free           Liquid d1
+    liquid/d1|d1.1|d1:free      Liquid d1 and d1.1
     openai-decisions            OpenAI Decisions API (gpt-6-luna)
     ownbuild/<route>/<model>    Own build; route is ``openai`` (direct) or ``copilot`` (aiproxy)
         ?effort=none|low|medium|high|xhigh|max&cap=512&max_in=64000

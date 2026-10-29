@@ -37,7 +37,18 @@ PRICES: dict[str, Price] = {
     "clef-flash": Price(
         0.09, 0.0, source="https://developers.cloudflare.com/workers-ai/models/clef-flash/"
     ),
-    "d1": Price(0.04, 0.0, source="https://www.liquid.ai/blog/d1-decision-model (methodology)"),
+    "d1": Price(
+        0.02,
+        0.0,
+        source="https://www.liquid.ai/pricing (legacy d1)",
+        read_on="2026-10-28",
+    ),
+    "d1.1": Price(
+        None,
+        0.0,
+        source="https://www.liquid.ai/pricing (no separate d1.1 rate listed)",
+        read_on="2026-10-28",
+    ),
     "d1:free": Price(0.0, 0.0, source="docs.liquid.ai: text-only free tier"),
     "openai-decisions/gpt-6-luna": Price(
         0.10,
