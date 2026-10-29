@@ -281,9 +281,11 @@ def test_liquid_reported_cost_is_saved_in_rows_and_raw_capture(toy: Settings) ->
     assert summary.cost_usd == pytest.approx(reported_cost)
     with Store(toy.runs_dir) as store:
         rows = store.rows("liquid-d1-1__toy")
+        run = store.runs()[0]
     capture = json.loads(
         (toy.runs_dir / "raw" / "liquid-d1-1__toy.jsonl").read_text(encoding="utf-8")
     )
+    assert run.config["max_input_tokens"] == 65_536
     assert rows[0].cost_usd == pytest.approx(reported_cost)
     assert capture["cost_usd"] == pytest.approx(reported_cost)
     assert capture["response_raw"]["usage"]["cost"] == pytest.approx(reported_cost)
