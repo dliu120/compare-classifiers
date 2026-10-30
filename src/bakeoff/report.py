@@ -80,8 +80,9 @@ LEGEND = [
     "- **Non-answer rate**: share of scored Questions with no usable answer.",
     "- **Median s**: seconds per request; half the requests were faster.",
     (
-        "- **$ per 1k**: dollars per 1,000 requests at list prices, from the token counts each "
-        "vendor reported; `unknown` when the vendor reported no usage."
+        "- **$ per 1k**: dollars per 1,000 requests, from vendor-reported costs when available "
+        "or estimated from the stored rate and usage; later price changes do not recalculate "
+        "stored rows. `unknown` when any request has no reported or estimated cost."
     ),
     (
         "- **Over cap**: share of Cases longer than the Provider's input limit. In the sweep table "

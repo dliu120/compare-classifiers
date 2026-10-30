@@ -13,7 +13,7 @@ class BudgetGuard:
     bakeoff stays under the same cap. A request is admitted by ``reserve`` with an estimate of
     its cost, which counts toward the cap while the request is in flight, so concurrent
     requests cannot all slip under the cap together. ``settle`` replaces the estimate with the
-    real cost; a request whose cost stays unknown keeps its estimate (never zero) and is
+    real cost; a request whose cost stays unknown keeps its estimate, which may be zero, and is
     counted in ``unknown_costs`` so reports can say how much spend is unpriced.
     """
 

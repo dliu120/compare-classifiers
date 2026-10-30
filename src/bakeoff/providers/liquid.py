@@ -1,28 +1,26 @@
-"""Liquid d1 and d1:free: System One with top-level images; d1:free is text only.
-
-Facts (docs.liquid.ai, read 2026-10-06): up to 8 JPEG/PNG/WebP/GIF images as data URLs with the
-body under 4.5 MB; context undocumented; usage.output_tokens is 0 and every Question is billed
-as its own prompt including all images; $0.04 per M input for d1, d1:free is free.
-"""
-
 from __future__ import annotations
+
+import math
+from typing import Any
 
 import httpx
 
 from bakeoff.config import Settings
-from bakeoff.providers.base import Provider
+from bakeoff.http import HttpResult
+from bakeoff.providers.base import Provider, ProviderResult
 from bakeoff.providers.spec import require_credential, select_model
 from bakeoff.providers.systemone_http import SystemOneProvider
+from bakeoff.systemone import SystemOneRequest
 
 URL = "https://api.liquid.ai/decisions/v1/systemone"
 ENV_VAR = "LIQUID_API_KEY"
 DEFAULT_MODEL = "d1"
-MODELS = {"d1": "d1", "d1:free": "d1:free"}
+MODELS = {"d1": "d1", "d1.1": "d1.1", "d1:free": "d1:free"}
 TEXT_ONLY_MODELS = frozenset({"d1:free"})
 
 
 class LiquidProvider(SystemOneProvider):
-    max_input_tokens = 65_536  # from d1's 422 error: 65,536 tokens or 250 KB per question
+    max_input_tokens = 65_536
     concurrency = 4
     url = URL
 
@@ -34,6 +32,23 @@ class LiquidProvider(SystemOneProvider):
         self.model = model
         self.price_key = model
         self.supports_images = model not in TEXT_ONLY_MODELS
+
+    def _result(
+        self, request: SystemOneRequest, request_raw: Any, sent: HttpResult
+    ) -> ProviderResult:
+        result = super()._result(request, request_raw, sent)
+        if self.model != "d1.1":
+            return result
+        usage = sent.data.get("usage") if isinstance(sent.data, dict) else None
+        reported_cost = usage.get("cost") if isinstance(usage, dict) else None
+        if isinstance(reported_cost, (int, float)) and not isinstance(reported_cost, bool):
+            try:
+                cost = float(reported_cost)
+            except OverflowError:
+                return result
+            if math.isfinite(cost) and cost >= 0:
+                result.cost_usd = cost
+        return result
 
 
 def build(spec: str, settings: Settings) -> Provider:

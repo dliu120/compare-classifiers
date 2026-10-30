@@ -6,7 +6,9 @@ import hashlib
 import json
 from pathlib import Path
 
+import httpx
 import pytest
+import respx
 from typer.testing import CliRunner
 
 import bakeoff.providers
@@ -247,7 +249,46 @@ def test_run_writes_rows_and_raw_capture(fake_registry: list[FakeProvider], toy:
     assert len(lines) == 4
     record = json.loads(lines[0])
     assert record["request_raw"]["questions"] and record["response_raw"] == {"ok": True}
+    assert record["cost_usd"] == pytest.approx(0.01)
+    assert rows[0].cost_usd == pytest.approx(record["cost_usd"])
     assert "headers" not in json.dumps(record).lower()
+
+
+@respx.mock
+def test_liquid_reported_cost_is_saved_in_rows_and_raw_capture(toy: Settings) -> None:
+    reported_cost = 0.000123
+    route = respx.post("https://api.liquid.ai/decisions/v1/systemone").mock(
+        return_value=httpx.Response(
+            200,
+            json={
+                "model": "d1.1",
+                "answers": {
+                    "department": {
+                        "type": "choice",
+                        "choice": "billing",
+                        "probabilities": {"billing": 0.8, "technical": 0.1, "sales": 0.1},
+                    }
+                },
+                "usage": {"input_tokens": 10, "output_tokens": 0, "cost": reported_cost},
+            },
+        )
+    )
+    keyed_settings = toy.model_copy(update={"liquid_api_key": "liquid-test"})
+
+    summary = runner.run(["liquid/d1.1"], ["toy"], keyed_settings, limit=1)
+
+    assert route.call_count == 1
+    assert summary.cost_usd == pytest.approx(reported_cost)
+    with Store(toy.runs_dir) as store:
+        rows = store.rows("liquid-d1-1__toy")
+        run = store.runs()[0]
+    capture = json.loads(
+        (toy.runs_dir / "raw" / "liquid-d1-1__toy.jsonl").read_text(encoding="utf-8")
+    )
+    assert run.config["max_input_tokens"] == 65_536
+    assert rows[0].cost_usd == pytest.approx(reported_cost)
+    assert capture["cost_usd"] == pytest.approx(reported_cost)
+    assert capture["response_raw"]["usage"]["cost"] == pytest.approx(reported_cost)
 
 
 def test_run_resumes_without_duplicates(fake_registry: list[FakeProvider], toy: Settings) -> None:
@@ -310,6 +351,36 @@ def test_run_flags_over_limit(fake_registry: list[FakeProvider], toy: Settings) 
     with Store(toy.runs_dir) as store:
         rows = store.rows(runner.run_id_for(spec, "toy"))
     assert rows and all(row.over_limit for row in rows)
+
+
+def test_run_flags_reported_input_limit_rejection(toy: Settings) -> None:
+    case = write_toy_family(toy.data_dir)[0]
+    provider = FakeProvider()
+    result = ProviderResult(
+        provider_id=provider.id,
+        latency_s=0.1,
+        http_status=422,
+        error="HTTP 422: prompt is over the model's input limit",
+    )
+
+    rows = runner.build_rows("fake__toy", case, 0, provider, result)
+
+    assert rows and all(row.over_limit for row in rows)
+
+
+def test_run_does_not_flag_unrelated_http_422_as_over_limit(toy: Settings) -> None:
+    case = write_toy_family(toy.data_dir)[0]
+    provider = FakeProvider()
+    result = ProviderResult(
+        provider_id=provider.id,
+        latency_s=0.1,
+        http_status=422,
+        error="HTTP 422: invalid model name",
+    )
+
+    rows = runner.build_rows("fake__toy", case, 0, provider, result)
+
+    assert rows and not any(row.over_limit for row in rows)
 
 
 def test_run_counts_non_answers_and_unknown_costs(

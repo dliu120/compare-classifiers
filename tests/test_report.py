@@ -80,6 +80,9 @@ def test_build_report_has_family_overall_pairwise_and_sweep_tables(tmp_path: Pat
     assert "| jev-1.13.0 | n/a | n/a | 4 | 3 | 1 | 0 | 0.750 |" in markdown
     assert "| gpt-6-luna (openai, out ≤512) | low | no cap | 4 | 2 | 2 | 0 | 0.500 |" in markdown
     assert "unknown" in markdown  # the unpriced Provider's cost column
+    assert "`unknown` when any request has no reported or estimated cost" in markdown
+    assert "estimated from the stored rate and usage" in markdown
+    assert "later price changes do not recalculate stored rows" in markdown
     assert "$0.1000" in markdown  # 0.0001 per Case in toy -> $0.10 per 1k
     overall = markdown.split("## Overall")[1].split("## Sweeps")[0]
     assert "| jev-1.13.0 | n/a | n/a | 12 | 9 | 3 | 0 | 0.750 |" in overall  # three Families pooled

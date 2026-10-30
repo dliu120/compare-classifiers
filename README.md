@@ -17,7 +17,8 @@ probabilities with TypeSafe's documented formulas.
 | `jev` | TypeSafe Jev `jev-1.13.0` | `TYPESAFE_API_KEY` (or the key stored by use-jev) | no | 64k per request, 32k for the State; accepted 16k inputs, rejected 24k | 0.042 |
 | `openai-decisions` | OpenAI Decisions API, `gpt-6-luna` (beta) | `OPENAI_API_KEY` | yes | not stated | 0.10 |
 | `cloudflare/clef`, `cloudflare/clef-flash` | Workers AI Clef 27B / 9B | `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_AUTH_TOKEN` | yes | earlier docs: 65,536; Oct 12 errors name 65,536 / 24,576; historical 128k accepted, 256k rejected | 0.24 / 0.09 |
-| `liquid/d1`, `liquid/d1:free` | Liquid d1 | `LIQUID_API_KEY` | yes (`d1` only) | 65,536 tokens or 250 KB per question, per its error message | 0.04 / 0 |
+| `liquid/d1`, `liquid/d1:free` | Liquid d1 | `LIQUID_API_KEY` | yes (`d1` only) | 65,536 tokens or 250 KB per question, per its error message | 0.02 / 0 |
+| `liquid/d1.1` | Liquid AI hosted D1.1, current default | `LIQUID_API_KEY` | yes | 65,536 tokens or 250,000 bytes per prompt (live 422 response) | not separately listed |
 | `foundry`, `foundry/<deployment>` | Microsoft-Decision-1 on Microsoft Foundry | `FOUNDRY_ENDPOINT`, `FOUNDRY_ACCESS_TOKEN` (Entra) | no | 32,768 full prompt; tested 16k States accepted, 24k rejected | 0.042 |
 | `ownbuild/openai/gpt-6-luna?...` | GPT-6 Luna via the OpenAI Responses API | `OPENAI_API_KEY` | yes | 922k | 0.10 in, 0.50 out |
 | `ownbuild/copilot/gpt-6-luna?...` | GPT-6 Luna via GitHub Copilot through a local [aiproxy](https://github.com/prabirshrestha/aiproxy) | aiproxy running on `127.0.0.1:17688` | yes | 872k | Copilot credits at the same list rates |
@@ -41,8 +42,19 @@ cp .env.example .env   # fill in the keys you have; the file is gitignored
 ```
 
 Prices come from `src/bakeoff/pricing.py` (existing list prices read on 2026-10-06;
-Microsoft-Decision-1 on 2026-10-10; Luna long-context rates on 2026-10-12). Spend is
-capped per `run` by `--budget` or `BAKEOFF_BUDGET_USD` (default 50 USD).
+Microsoft-Decision-1 on 2026-10-10; Luna long-context rates on 2026-10-12; Liquid D1/D1.1
+pricing checked on 2026-10-28). The stored D1 runs use the prior $0.04/M estimate; Liquid's
+current pricing page lists legacy D1 at $0.02/M, or about $0.16 per 1,000 requests on the
+stored smoke input usage. Liquid documents D1.1 as its current hosted default, with image
+support and input-only billing, but its public pricing page does not list a separate D1.1 rate.
+The API returned a `usage.cost` field for successful D1.1 requests in this benchmark; those
+values are reported as returned, appear consistent with $0.02/MTok, and are not independently
+verified against an invoice. A live 64k-target request returned HTTP 422 and documented a
+65,536-token or 250,000-byte prompt limit.
+`--budget` or `BAKEOFF_BUDGET_USD` (default 50 USD) limits estimated and recorded spend, but an
+unknown-price request reserves $0 before it is sent. Requests whose responses omit cost add no
+amount to the spend total, and concurrent requests may finish after the limit is crossed; treat
+the budget as a best-effort stop, not a hard cap, for unpriced Providers.
 
 ## Commands
 
@@ -215,6 +227,7 @@ vendor's limit; blank means not run yet. 12 question rows per cell.
 | clef (Cloudflare) | n/a | n/a | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000* | 0.000* |
 | clef-flash (Cloudflare) | n/a | n/a | 1.000 | 1.000 | 0.750 | 1.000 | 1.000 | 1.000* | 0.000* |
 | d1 (Liquid) | n/a | n/a | 1.000 | 0.833 | 0.917 | 1.000 | 0.000* | 0.000* | 0.000* |
+| d1.1 (Liquid) | n/a | n/a | 1.000 | 1.000 | 1.000 | 1.000 | 0.000* | 0.000* | 0.000* |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 |
 | gpt-6-luna (copilot) | none | 256000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000* |
 | gpt-6-luna (openai) | none | 256000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000 | 1.000* |
@@ -237,11 +250,22 @@ Accuracy is Right / 119; answered accuracy is Right / (Right + Wrong).
 | clef (Cloudflare) | 117 | 2 | 0 | 0.983 | 0.983 | 0.54 | $0.95 |
 | clef-flash (Cloudflare) | 115 | 4 | 0 | 0.966 | 0.966 | 0.26 | $0.36 |
 | d1 (Liquid) | 115 | 4 | 0 | 0.966 | 0.966 | 0.25 | $0.32 |
+| d1.1 (Liquid) | 111 | 8 | 0 | 0.933 | 0.933 | 0.17 | $0.08 |
 | gpt-6-luna (OpenAI Decisions) | 112 | 7 | 0 | 0.941 | 0.941 | 0.15 | $0.34 |
 | gpt-6-luna (copilot), effort none | 115 | 4 | 0 | 0.966 | 0.966 | 2.16 | $0.22 |
 | gpt-6-luna (openai), effort none | 113 | 6 | 0 | 0.950 | 0.950 | 2.36 | $0.22 |
 | jev-1.13.0 | 73 | 7 | 39 | 0.613 | 0.912 | 0.10 | unknown |
 | Microsoft-Decision-1 (Foundry), Oct 10 | 74 | 6 | 39 | 0.622 | 0.925 | 0.27 | unknown |
+
+D1.1 ran on the same 119 Questions as D1: both got 110 right, D1 alone got five right, and
+D1.1 alone got one right. This is one pass on small slices, not evidence that either model is
+generally better. D1.1 returned 12/12 on each 8k–32k needle Family; 64k and larger inputs
+were rejected with HTTP 422. The $0.08/1k D1.1 value is based on API-reported `usage.cost`, not
+an independently verified invoice; no separate public D1.1 price is listed. The $0.32/1k D1
+figure above is the historical stored estimate, not the current D1 rate; the 16k–32k sweep
+costs in the full report use that same historical rate. Sweep overall cost remains unknown
+because 18 D1.1 input-limit rejections did not return costs.
+[D1.1 results, paired counts, and limitations](docs/liquid-d1-1-comparison-2026-10-28.md).
 
 **What stands out**
 

@@ -1,6 +1,6 @@
 # Bakeoff report
 
-_32 runs in `runs`, built 2026-10-10T16:32:47+00:00_
+_36 runs in `runs`, built 2026-10-29T06:08:44+00:00_
 
 **How to read this report**
 
@@ -16,7 +16,7 @@ _32 runs in `runs`, built 2026-10-10T16:32:47+00:00_
 - **Right + Wrong + Non-answers** equals Cases; these are question counts, not requests.
 - **Non-answer rate**: share of scored Questions with no usable answer.
 - **Median s**: seconds per request; half the requests were faster.
-- **$ per 1k**: dollars per 1,000 requests at list prices, from the token counts each vendor reported; `unknown` when the vendor reported no usage.
+- **$ per 1k**: dollars per 1,000 requests, from vendor-reported costs when available or estimated from the stored rate and usage; later price changes do not recalculate stored rows. `unknown` when any request has no reported or estimated cost.
 - **Over cap**: share of Cases longer than the Provider's input limit. In the sweep table the same thing is marked with `*`.
 - **Details tables**: chance-corrected accuracy (0 is guessing, 1 is perfect), macro-F1 (accuracy balanced across classes), ECE and Brier (calibration, lower is better, 0 is perfect), and p95 latency (19 of 20 requests were faster).
 
@@ -27,6 +27,7 @@ _32 runs in `runs`, built 2026-10-10T16:32:47+00:00_
 | clef (Cloudflare) | n/a | n/a | 20 | 19 | 1 | 0 | 0.950 | 0.950 | 0.000 | 0.53 | $0.3196 | 0.000 |
 | clef-flash (Cloudflare) | n/a | n/a | 20 | 19 | 1 | 0 | 0.950 | 0.950 | 0.000 | 0.25 | $0.1198 | 0.000 |
 | d1 (Liquid) | n/a | n/a | 20 | 19 | 1 | 0 | 0.950 | 0.950 | 0.000 | 0.22 | $0.0186 | 0.000 |
+| d1.1 (Liquid) | n/a | n/a | 20 | 16 | 4 | 0 | 0.800 | 0.800 | 0.000 | 0.16 | $0.0093 | 0.000 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 20 | 16 | 4 | 0 | 0.800 | 0.800 | 0.000 | 0.26 | $0.0243 | 0.000 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 20 | 15 | 5 | 0 | 0.750 | 0.750 | 0.000 | 0.13 | $0.0654 | 0.000 |
 | gpt-6-luna (copilot) | none | no cap | 20 | 17 | 3 | 0 | 0.850 | 0.850 | 0.000 | 6.60 | $0.4218 | 0.000 |
@@ -40,6 +41,7 @@ Details:
 | clef (Cloudflare) | n/a | n/a | 0.949 | 0.959 | 0.095 | 0.047 | 0.78 |
 | clef-flash (Cloudflare) | n/a | n/a | 0.949 | 0.959 | 0.065 | 0.085 | 0.62 |
 | d1 (Liquid) | n/a | n/a | 0.949 | 0.959 | 0.081 | 0.084 | 0.40 |
+| d1.1 (Liquid) | n/a | n/a | 0.797 | 0.728 | 0.132 | 0.231 | 0.28 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 0.797 | 0.768 | 0.128 | 0.248 | 0.40 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 0.747 | 0.692 | 0.158 | 0.267 | 0.16 |
 | gpt-6-luna (copilot) | none | no cap | 0.848 | 0.805 | 0.199 | 0.335 | 7.84 |
@@ -54,6 +56,7 @@ Each row against the most accurate Run, clef (Cloudflare), on the same Cases (a 
 | decision-1 (Microsoft Foundry) | n/a | n/a | -0.150 | [-0.300, +0.000] | 0/3 | 0.250 |
 | jev-1.13.0 | n/a | n/a | -0.150 | [-0.300, +0.000] | 0/3 | 0.250 |
 | d1 (Liquid) | n/a | n/a | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
+| d1.1 (Liquid) | n/a | n/a | -0.150 | [-0.300, +0.000] | 0/3 | 0.250 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | -0.200 | [-0.400, -0.050] | 0/4 | 0.125 |
 | gpt-6-luna (copilot) | none | no cap | -0.100 | [-0.250, +0.000] | 0/2 | 0.500 |
 | gpt-6-luna (openai) | none | no cap | -0.150 | [-0.300, +0.000] | 0/3 | 0.250 |
@@ -65,6 +68,7 @@ Each row against the most accurate Run, clef (Cloudflare), on the same Cases (a 
 | clef (Cloudflare) | n/a | n/a | 12 | 12 | 0 | 0 | 1.000 | 1.000 | 0.000 | 7.00 | $8.6538 | 0.000 |
 | clef-flash (Cloudflare) | n/a | n/a | 12 | 12 | 0 | 0 | 1.000 | 1.000 | 0.000 | 2.26 | $3.2452 | 0.000 |
 | d1 (Liquid) | n/a | n/a | 12 | 12 | 0 | 0 | 1.000 | 1.000 | 0.000 | 1.58 | $3.3110 | 0.000 |
+| d1.1 (Liquid) | n/a | n/a | 12 | 12 | 0 | 0 | 1.000 | 1.000 | 0.000 | 1.41 | $0.8291 | 0.000 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 12 | 0 | 0 | 12 | 0.000 | - | 1.000 | 0.61 | unknown | 0.000 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 12 | 12 | 0 | 0 | 1.000 | 1.000 | 0.000 | 0.21 | $3.2382 | 0.000 |
 | gpt-6-luna (copilot) | none | no cap | 12 | 12 | 0 | 0 | 1.000 | 1.000 | 0.000 | 2.22 | $0.3530 | 0.000 |
@@ -78,6 +82,7 @@ Details:
 | clef (Cloudflare) | n/a | n/a | 1.000 | 1.000 | 0.012 | 0.000 | 7.16 |
 | clef-flash (Cloudflare) | n/a | n/a | 1.000 | 1.000 | 0.029 | 0.002 | 2.62 |
 | d1 (Liquid) | n/a | n/a | 1.000 | 1.000 | 0.010 | 0.000 | 1.79 |
+| d1.1 (Liquid) | n/a | n/a | 1.000 | 1.000 | 0.002 | 0.000 | 2.01 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | -0.538 | 0.000 | - | - | 0.70 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 1.000 | 1.000 | 0.000 | 0.000 | 0.26 |
 | gpt-6-luna (copilot) | none | no cap | 1.000 | 1.000 | 0.014 | 0.001 | 2.72 |
@@ -92,6 +97,7 @@ Each row against the most accurate Run, clef (Cloudflare), on the same Cases (a 
 | decision-1 (Microsoft Foundry) | n/a | n/a | -1.000 | [-1.000, -1.000] | 0/12 | 0.000 |
 | jev-1.13.0 | n/a | n/a | -1.000 | [-1.000, -1.000] | 0/12 | 0.000 |
 | d1 (Liquid) | n/a | n/a | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
+| d1.1 (Liquid) | n/a | n/a | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
 | gpt-6-luna (copilot) | none | no cap | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
 | gpt-6-luna (openai) | none | no cap | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
@@ -103,6 +109,7 @@ Each row against the most accurate Run, clef (Cloudflare), on the same Cases (a 
 | clef (Cloudflare) | n/a | n/a | 27 | 27 | 0 | 0 | 1.000 | 1.000 | 0.000 | 0.53 | $0.1049 | 0.000 |
 | clef-flash (Cloudflare) | n/a | n/a | 27 | 27 | 0 | 0 | 1.000 | 1.000 | 0.000 | 0.27 | $0.0393 | 0.000 |
 | d1 (Liquid) | n/a | n/a | 27 | 27 | 0 | 0 | 1.000 | 1.000 | 0.000 | 0.29 | $0.0230 | 0.000 |
+| d1.1 (Liquid) | n/a | n/a | 27 | 27 | 0 | 0 | 1.000 | 1.000 | 0.000 | 0.20 | $0.0082 | 0.000 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 27 | 0 | 0 | 27 | 0.000 | - | 1.000 | - | $0.0000 | 0.000 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 27 | 27 | 0 | 0 | 1.000 | 1.000 | 0.000 | 0.15 | $0.0423 | 0.000 |
 | gpt-6-luna (copilot) | none | no cap | 27 | 27 | 0 | 0 | 1.000 | 1.000 | 0.000 | 1.99 | $0.0900 | 0.000 |
@@ -116,6 +123,7 @@ Details:
 | clef (Cloudflare) | n/a | n/a | 1.000 | 1.000 | 0.012 | 0.000 | 0.81 |
 | clef-flash (Cloudflare) | n/a | n/a | 1.000 | 1.000 | 0.037 | 0.002 | 0.50 |
 | d1 (Liquid) | n/a | n/a | 1.000 | 1.000 | 0.000 | 0.000 | 0.56 |
+| d1.1 (Liquid) | n/a | n/a | 1.000 | 1.000 | 0.003 | 0.000 | 0.42 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | -0.407 | 0.000 | - | - | - |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 1.000 | 1.000 | 0.001 | 0.000 | 0.21 |
 | gpt-6-luna (copilot) | none | no cap | 1.000 | 1.000 | 0.004 | 0.000 | 3.48 |
@@ -130,6 +138,7 @@ Each row against the most accurate Run, clef (Cloudflare), on the same Cases (a 
 | decision-1 (Microsoft Foundry) | n/a | n/a | -1.000 | [-1.000, -1.000] | 0/27 | 0.000 |
 | jev-1.13.0 | n/a | n/a | -1.000 | [-1.000, -1.000] | 0/27 | 0.000 |
 | d1 (Liquid) | n/a | n/a | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
+| d1.1 (Liquid) | n/a | n/a | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
 | gpt-6-luna (copilot) | none | no cap | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
 | gpt-6-luna (openai) | none | no cap | +0.000 | [+0.000, +0.000] | 0/0 | 1.000 |
@@ -141,6 +150,7 @@ Each row against the most accurate Run, clef (Cloudflare), on the same Cases (a 
 | clef (Cloudflare) | n/a | n/a | 60 | 59 | 1 | 0 | 0.983 | 0.983 | 0.000 | 0.51 | $0.1165 | 0.000 |
 | clef-flash (Cloudflare) | n/a | n/a | 60 | 57 | 3 | 0 | 0.950 | 0.950 | 0.000 | 0.26 | $0.0437 | 0.000 |
 | d1 (Liquid) | n/a | n/a | 60 | 57 | 3 | 0 | 0.950 | 0.950 | 0.000 | 0.22 | $0.0152 | 0.000 |
+| d1.1 (Liquid) | n/a | n/a | 60 | 56 | 4 | 0 | 0.933 | 0.933 | 0.000 | 0.17 | $0.0051 | 0.000 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 60 | 58 | 2 | 0 | 0.967 | 0.967 | 0.000 | 0.27 | $0.0100 | 0.000 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 60 | 58 | 2 | 0 | 0.967 | 0.967 | 0.000 | 0.21 | $0.0524 | 0.000 |
 | gpt-6-luna (copilot) | none | no cap | 60 | 59 | 1 | 0 | 0.983 | 0.983 | 0.000 | 1.76 | $0.1019 | 0.000 |
@@ -154,6 +164,7 @@ Details:
 | clef (Cloudflare) | n/a | n/a | 0.975 | 0.986 | 0.068 | 0.037 | 0.72 |
 | clef-flash (Cloudflare) | n/a | n/a | 0.924 | 0.956 | 0.112 | 0.105 | 1.04 |
 | d1 (Liquid) | n/a | n/a | 0.924 | 0.971 | 0.100 | 0.108 | 0.44 |
+| d1.1 (Liquid) | n/a | n/a | 0.898 | 0.907 | 0.039 | 0.091 | 0.32 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 0.949 | 0.971 | 0.048 | 0.074 | 0.42 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 0.949 | 0.986 | 0.037 | 0.045 | 0.45 |
 | gpt-6-luna (copilot) | none | no cap | 0.975 | 1.000 | 0.058 | 0.029 | 2.13 |
@@ -168,6 +179,7 @@ Each row against the most accurate Run, clef (Cloudflare), on the same Cases (a 
 | decision-1 (Microsoft Foundry) | n/a | n/a | -0.017 | [-0.050, +0.000] | 0/1 | 1.000 |
 | jev-1.13.0 | n/a | n/a | -0.033 | [-0.083, +0.000] | 0/2 | 0.500 |
 | d1 (Liquid) | n/a | n/a | -0.033 | [-0.083, +0.000] | 0/2 | 0.500 |
+| d1.1 (Liquid) | n/a | n/a | -0.050 | [-0.117, +0.000] | 0/3 | 0.250 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | -0.017 | [-0.050, +0.000] | 0/1 | 1.000 |
 | gpt-6-luna (copilot) | none | no cap | +0.000 | [-0.050, +0.050] | 1/1 | 1.000 |
 | gpt-6-luna (openai) | none | no cap | -0.017 | [-0.067, +0.033] | 1/2 | 1.000 |
@@ -179,6 +191,7 @@ Each row against the most accurate Run, clef (Cloudflare), on the same Cases (a 
 | clef (Cloudflare) | n/a | n/a | 119 | 117 | 2 | 0 | 0.983 | 0.983 | 0.000 | 0.54 | $0.9506 | 0.000 |
 | clef-flash (Cloudflare) | n/a | n/a | 119 | 115 | 4 | 0 | 0.966 | 0.966 | 0.000 | 0.26 | $0.3565 | 0.000 |
 | d1 (Liquid) | n/a | n/a | 119 | 115 | 4 | 0 | 0.966 | 0.966 | 0.000 | 0.25 | $0.3182 | 0.000 |
+| d1.1 (Liquid) | n/a | n/a | 119 | 111 | 8 | 0 | 0.933 | 0.933 | 0.000 | 0.17 | $0.0822 | 0.000 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 119 | 74 | 6 | 39 | 0.622 | 0.925 | 0.328 | 0.27 | unknown | 0.000 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 119 | 112 | 7 | 0 | 0.941 | 0.941 | 0.000 | 0.15 | $0.3429 | 0.000 |
 | gpt-6-luna (copilot) | none | no cap | 119 | 115 | 4 | 0 | 0.966 | 0.966 | 0.000 | 2.16 | $0.2180 | 0.000 |
@@ -192,6 +205,7 @@ Details:
 | clef (Cloudflare) | n/a | n/a | 0.977 | 0.985 | 0.054 | 0.027 | 6.92 |
 | clef-flash (Cloudflare) | n/a | n/a | 0.954 | 0.980 | 0.074 | 0.068 | 2.27 |
 | d1 (Liquid) | n/a | n/a | 0.954 | 0.982 | 0.043 | 0.068 | 1.54 |
+| d1.1 (Liquid) | n/a | n/a | 0.907 | 0.898 | 0.029 | 0.085 | 1.40 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 0.477 | 0.409 | 0.053 | 0.118 | 0.65 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 0.919 | 0.900 | 0.039 | 0.067 | 0.39 |
 | gpt-6-luna (copilot) | none | no cap | 0.954 | 0.938 | 0.026 | 0.071 | 7.17 |
@@ -207,6 +221,7 @@ Accuracy by State length (`longstate-*` Families); `*` marks Runs with Cases ove
 | clef (Cloudflare) | n/a | n/a | 1.000 |
 | clef-flash (Cloudflare) | n/a | n/a | 1.000 |
 | d1 (Liquid) | n/a | n/a | 1.000 |
+| d1.1 (Liquid) | n/a | n/a | 1.000 |
 | decision-1 (Microsoft Foundry) | n/a | n/a | 0.000 |
 | gpt-6-luna (OpenAI Decisions) | n/a | n/a | 1.000 |
 | gpt-6-luna (copilot) | none | no cap | 1.000 |
@@ -220,6 +235,7 @@ Row labels above and the exact spec each one stands for:
 - **clef (Cloudflare)**: `cloudflare/clef`
 - **clef-flash (Cloudflare)**: `cloudflare/clef-flash`
 - **d1 (Liquid)**: `liquid/d1`
+- **d1.1 (Liquid)**: `liquid/d1.1`
 - **decision-1 (Microsoft Foundry)**: `foundry/decision-1`
 - **gpt-6-luna (OpenAI Decisions)**: `openai-decisions/gpt-6-luna`
 - **gpt-6-luna (copilot) · effort none · no cap**: `ownbuild/copilot/gpt-6-luna?effort=none&mode=probabilities&samples=1`
